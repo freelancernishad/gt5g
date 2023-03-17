@@ -18,7 +18,7 @@
 
 
             <div class="bg-gd p-3  text-white">
-                <p class="fs-4 fw-bold text-center">GT- 5G Team Commission Program
+                <p class="fs-4 fw-bold text-center">GT- 5G Investment Program
                 </p>
                 <div class="bg-gdd p-3 rounded-1">
                     <table style="width: 100%;">
@@ -91,10 +91,14 @@
                                 <td>{{ packag.name }}</td>
                                 <td>{{ packag.packagePrice }}</td>
                                 <td>{{ levels[0].comission }}</td>
-                                <td>{{ (packag.packagePrice*100)/levels[0].comission }}</td>
-                                <td>{{ packag.packageEarn*packag.packageDuration }}</td>
+                                <td>{{ (packag.packagePrice*levels[0].comission)/100 }}</td>
+                                <td>{{ levels[0].task_commisition }}%  {{ levels[1].task_commisition }}%  {{ levels[2].task_commisition }}%</td>
 
                             </tr>
+
+
+
+
 
 
                             </tbody>
