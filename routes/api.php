@@ -19,6 +19,8 @@ use App\Http\Controllers\WithdrawalController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\PackageController;
 use App\Models\Package;
+use App\Models\PackageBuy;
+use App\Models\User;
 use Illuminate\Support\Facades\Log;
 
 /*
@@ -40,7 +42,34 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('auto/run', function (Request $request) {
 
-    Log::info('runing');
+    $package_buys = PackageBuy::where(['status'=>'Active'])->get();
+
+
+    foreach ($package_buys as $value) {
+
+        $PackageBuy = PackageBuy::find($value->id);
+
+    $nowDate =  strtotime(date('Y-m-d'));
+    $endDate =  strtotime($value->endDate);
+    if($nowDate>$endDate){
+        $PackageBuy->update(['status'=>'Deactive']);
+    }else{
+        $id = $value->userid;
+        $user = User::find($id);
+        $earn = $value->earn;
+        $receiveable = $user->receiveable;
+        $nowReceiveAble = $receiveable+$earn;
+        $user->update(['receiveable'=>$nowReceiveAble]);
+    }
+
+
+
+
+
+
+    }
+
+
 
 });
 
