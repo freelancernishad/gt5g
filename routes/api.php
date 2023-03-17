@@ -19,6 +19,7 @@ use App\Http\Controllers\WithdrawalController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\PackageController;
 use App\Models\Package;
+use Illuminate\Support\Facades\Log;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+
+Route::get('auto/run', function (Request $request) {
+
+    Log::info('runing');
+
+});
 
 Route::post('refound', function (Request $request) {
 
