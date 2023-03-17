@@ -26,71 +26,21 @@
                             <tr>
                                 <th>Equipment</th>
                                 <th>Price</th>
-                                <th>Per hour</th>
                                 <th>Every Day</th>
                                 <th>Per Month</th>
                                 <th>Total revenue</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Micro base station - 5.2KW</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
+                            <tr  v-for="packag in packages" :key="'package'+packag.id">
+                                <td>{{ packag.name }}</td>
+                                <td>{{ packag.packagePrice }}</td>
+                                <td>{{ packag.packageEarn }}</td>
+                                <td>{{ packag.packageEarn*30 }}</td>
+                                <td>{{ packag.packageEarn*packag.packageDuration }}</td>
+
                             </tr>
-                            <tr>
-                                <td>Small Base Station-12KW</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                            </tr>
-                            <tr>
-                                <td>Large base station - 55KW </td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                            </tr>
-                            <tr>
-                                <td>Medium base station - 25KW</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                            </tr>
-                            <tr>
-                                <td>Large base station - 120KW </td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                            </tr>
-                            <tr>
-                                <td>Giant Base Station - 255KW
-                                </td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                            </tr>
-                            <tr>
-                                <td>Giant Base Station - 540KW
-                                </td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                                <td>1001</td>
-                            </tr>
+
 
                         </tbody>
                     </table>
@@ -137,64 +87,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Micro base station - 5.2KW</td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                    <td>1001</td>
+                                <tr  v-for="packag in packages" :key="'teamProfit'+packag.id">
+                                <td>{{ packag.name }}</td>
+                                <td>{{ packag.packagePrice }}</td>
+                                <td>{{ levels[0].comission }}</td>
+                                <td>{{ (packag.packagePrice*100)/levels[0].comission }}</td>
+                                <td>{{ packag.packageEarn*packag.packageDuration }}</td>
 
-                                </tr>
-                                <tr>
-                                    <td>Small Base Station-12KW</td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                    <td>1001</td>
+                            </tr>
 
-                                    <td>1001</td>
-                                </tr>
-                                <tr>
-                                    <td>Large base station - 55KW </td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                </tr>
-                                <tr>
-                                    <td>Medium base station - 25KW</td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                </tr>
-                                <tr>
-                                    <td>Large base station - 120KW </td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                </tr>
-                                <tr>
-                                    <td>Giant Base Station - 255KW
-                                    </td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                </tr>
-                                <tr>
-                                    <td>Giant Base Station - 540KW
-                                    </td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-                                    <td>1001</td>
-
-                                    <td>1001</td>
-                                </tr>
 
                             </tbody>
                         </table>
@@ -312,3 +213,28 @@
 
     </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return {
+            levels:{},
+            packages:{},
+        }
+    },
+    methods: {
+        async getPackages(){
+            var res = await this.callApi('get',`/api/get/packages`,[]);
+            this.packages = res.data
+
+            var resLevels = await this.callApi('get', `/api/admin/level`, []);
+                this.levels = resLevels.data
+
+
+        },
+    },
+    mounted() {
+        this.getPackages();
+    },
+}
+</script>
