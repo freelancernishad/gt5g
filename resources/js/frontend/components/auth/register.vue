@@ -5,30 +5,30 @@
 
 <form @submit.prevent="register" class="bg-white mx-4 shadow-lg ">
     <div class="py-3 text-center">
-        <img src="img/logo.86599c07.png" alt="" class="img-fluid w-50">
+        <img :src="$asseturl+'img/logo.86599c07.png'" alt="" class="img-fluid w-50">
         <p class="fw-bold mb-0 py-2">Welcome to Register</p>
     </div>
 
     <div>
         <div class="flex-nowrap input-group px-3 mb-3">
             <span class="input-group-text rounded-0" id="addon-wrapping">
-                <img src="img/phone.png" class="icon"></span>
+                <img :src="$asseturl+'img/phone.png'" class="icon"></span>
                 <input type="tel" class="form-control rounded-0" placeholder="+880" aria-label="Username" v-model="form.mobile"  aria-describedby="addon-wrapping">
         </div>
         <div class="flex-nowrap input-group px-3">
             <span class="input-group-text rounded-0" id="addon-wrapping">
-                <img src="img/pass.png" class="icon"></span>
+                <img :src="$asseturl+'img/pass.png'" class="icon"></span>
                 <input type="password" class="form-control rounded-0" placeholder="password" v-model="form.password" aria-label="Username" aria-describedby="addon-wrapping">
         </div>
         <div class="flex-nowrap input-group px-3 py-3">
-            <span class="input-group-text rounded-0" id="addon-wrapping"><img src="img/download.png"
+            <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
                     class="icon"></span>
             <input type="text" class="form-control rounded-0" placeholder="Invite Code" v-model="form.ref_by" aria-label="Username"
                 aria-describedby="addon-wrapping">
         </div>
         <div class="d-flex gap-5">
             <div class="flex-nowrap input-group px-3">
-                <span class="input-group-text rounded-0" id="addon-wrapping"><img src="img/download.png"
+                <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
                         class="icon"></span>
                 <input type="text" class="form-control rounded-0" placeholder="SMS Code"
                     aria-label="Username" aria-describedby="addon-wrapping">
@@ -40,7 +40,7 @@
         </div>
         <div class="d-flex gap-5 pt-3">
             <div class="flex-nowrap input-group px-3">
-                <span class="input-group-text rounded-0" id="addon-wrapping"><img src="img/download.png"
+                <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
                         class="icon"></span>
                 <input type="text" class="form-control rounded-0" placeholder=" Code" v-model="captcha" aria-describedby="addon-wrapping">
             </div>

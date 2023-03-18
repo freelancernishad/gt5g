@@ -2944,9 +2944,29 @@ var render = function render() {
         return _vm.login.apply(null, arguments);
       }
     }
-  }, [_vm._m(0), _vm._v(" "), _c("div", [_c("div", {
+  }, [_c("div", {
+    staticClass: "py-3 text-center"
+  }, [_c("img", {
+    staticClass: "img-fluid w-50",
+    attrs: {
+      src: _vm.$asseturl + "img/logo.86599c07.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("p", {
+    staticClass: "fw-bold mb-0 py-2"
+  }, [_vm._v("Welcome to login")])]), _vm._v(" "), _c("div", [_c("div", {
     staticClass: "flex-nowrap input-group px-3 mb-3"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("span", {
+    staticClass: "input-group-text rounded-0",
+    attrs: {
+      id: "addon-wrapping"
+    }
+  }, [_c("img", {
+    staticClass: "icon",
+    attrs: {
+      src: _vm.$asseturl + "img/phone.png"
+    }
+  })]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -2972,7 +2992,17 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "flex-nowrap input-group px-3"
-  }, [_vm._m(2), _vm._v(" "), _c("input", {
+  }, [_c("span", {
+    staticClass: "input-group-text rounded-0",
+    attrs: {
+      id: "addon-wrapping"
+    }
+  }, [_c("img", {
+    staticClass: "icon",
+    attrs: {
+      src: _vm.$asseturl + "img/pass.png"
+    }
+  })]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -2996,7 +3026,7 @@ var render = function render() {
         _vm.$set(_vm.form, "password", $event.target.value);
       }
     }
-  })])]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("div", {
+  })])]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "mt-4 text-center w-100"
   }, [_c("button", {
     staticClass: "btn fw-bold mb-4 mt-2 rounded-0 text-white",
@@ -3033,51 +3063,6 @@ var render = function render() {
 };
 
 var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "py-3 text-center"
-  }, [_c("img", {
-    staticClass: "img-fluid w-50",
-    attrs: {
-      src: "img/logo.86599c07.png",
-      alt: ""
-    }
-  }), _vm._v(" "), _c("p", {
-    staticClass: "fw-bold mb-0 py-2"
-  }, [_vm._v("Welcome to login")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("span", {
-    staticClass: "input-group-text rounded-0",
-    attrs: {
-      id: "addon-wrapping"
-    }
-  }, [_c("img", {
-    staticClass: "icon",
-    attrs: {
-      src: "img/phone.png"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("span", {
-    staticClass: "input-group-text rounded-0",
-    attrs: {
-      id: "addon-wrapping"
-    }
-  }, [_c("img", {
-    staticClass: "icon",
-    attrs: {
-      src: "img/pass.png"
-    }
-  })]);
-}, function () {
   var _vm = this,
       _c = _vm._self._c;
 
@@ -3124,9 +3109,29 @@ var render = function render() {
         return _vm.register.apply(null, arguments);
       }
     }
-  }, [_vm._m(0), _vm._v(" "), _c("div", [_c("div", {
+  }, [_c("div", {
+    staticClass: "py-3 text-center"
+  }, [_c("img", {
+    staticClass: "img-fluid w-50",
+    attrs: {
+      src: _vm.$asseturl + "img/logo.86599c07.png",
+      alt: ""
+    }
+  }), _vm._v(" "), _c("p", {
+    staticClass: "fw-bold mb-0 py-2"
+  }, [_vm._v("Welcome to Register")])]), _vm._v(" "), _c("div", [_c("div", {
     staticClass: "flex-nowrap input-group px-3 mb-3"
-  }, [_vm._m(1), _vm._v(" "), _c("input", {
+  }, [_c("span", {
+    staticClass: "input-group-text rounded-0",
+    attrs: {
+      id: "addon-wrapping"
+    }
+  }, [_c("img", {
+    staticClass: "icon",
+    attrs: {
+      src: _vm.$asseturl + "img/phone.png"
+    }
+  })]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -3152,7 +3157,17 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "flex-nowrap input-group px-3"
-  }, [_vm._m(2), _vm._v(" "), _c("input", {
+  }, [_c("span", {
+    staticClass: "input-group-text rounded-0",
+    attrs: {
+      id: "addon-wrapping"
+    }
+  }, [_c("img", {
+    staticClass: "icon",
+    attrs: {
+      src: _vm.$asseturl + "img/pass.png"
+    }
+  })]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -3178,7 +3193,17 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "flex-nowrap input-group px-3 py-3"
-  }, [_vm._m(3), _vm._v(" "), _c("input", {
+  }, [_c("span", {
+    staticClass: "input-group-text rounded-0",
+    attrs: {
+      id: "addon-wrapping"
+    }
+  }, [_c("img", {
+    staticClass: "icon",
+    attrs: {
+      src: _vm.$asseturl + "img/download.png"
+    }
+  })]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -3202,11 +3227,43 @@ var render = function render() {
         _vm.$set(_vm.form, "ref_by", $event.target.value);
       }
     }
-  })]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "d-flex gap-5"
+  }, [_c("div", {
+    staticClass: "flex-nowrap input-group px-3"
+  }, [_c("span", {
+    staticClass: "input-group-text rounded-0",
+    attrs: {
+      id: "addon-wrapping"
+    }
+  }, [_c("img", {
+    staticClass: "icon",
+    attrs: {
+      src: _vm.$asseturl + "img/download.png"
+    }
+  })]), _vm._v(" "), _c("input", {
+    staticClass: "form-control rounded-0",
+    attrs: {
+      type: "text",
+      placeholder: "SMS Code",
+      "aria-label": "Username",
+      "aria-describedby": "addon-wrapping"
+    }
+  })]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c("div", {
     staticClass: "d-flex gap-5 pt-3"
   }, [_c("div", {
     staticClass: "flex-nowrap input-group px-3"
-  }, [_vm._m(5), _vm._v(" "), _c("input", {
+  }, [_c("span", {
+    staticClass: "input-group-text rounded-0",
+    attrs: {
+      id: "addon-wrapping"
+    }
+  }, [_c("img", {
+    staticClass: "icon",
+    attrs: {
+      src: _vm.$asseturl + "img/download.png"
+    }
+  })]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -3279,88 +3336,6 @@ var staticRenderFns = [function () {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "py-3 text-center"
-  }, [_c("img", {
-    staticClass: "img-fluid w-50",
-    attrs: {
-      src: "img/logo.86599c07.png",
-      alt: ""
-    }
-  }), _vm._v(" "), _c("p", {
-    staticClass: "fw-bold mb-0 py-2"
-  }, [_vm._v("Welcome to Register")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("span", {
-    staticClass: "input-group-text rounded-0",
-    attrs: {
-      id: "addon-wrapping"
-    }
-  }, [_c("img", {
-    staticClass: "icon",
-    attrs: {
-      src: "img/phone.png"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("span", {
-    staticClass: "input-group-text rounded-0",
-    attrs: {
-      id: "addon-wrapping"
-    }
-  }, [_c("img", {
-    staticClass: "icon",
-    attrs: {
-      src: "img/pass.png"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("span", {
-    staticClass: "input-group-text rounded-0",
-    attrs: {
-      id: "addon-wrapping"
-    }
-  }, [_c("img", {
-    staticClass: "icon",
-    attrs: {
-      src: "img/download.png"
-    }
-  })]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "d-flex gap-5"
-  }, [_c("div", {
-    staticClass: "flex-nowrap input-group px-3"
-  }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
-    attrs: {
-      id: "addon-wrapping"
-    }
-  }, [_c("img", {
-    staticClass: "icon",
-    attrs: {
-      src: "img/download.png"
-    }
-  })]), _vm._v(" "), _c("input", {
-    staticClass: "form-control rounded-0",
-    attrs: {
-      type: "text",
-      placeholder: "SMS Code",
-      "aria-label": "Username",
-      "aria-describedby": "addon-wrapping"
-    }
-  })]), _vm._v(" "), _c("div", {
     staticClass: "w-100"
   }, [_c("button", {
     staticClass: "btn fw-bold rounded-0",
@@ -3373,22 +3348,7 @@ var staticRenderFns = [function () {
     attrs: {
       type: "button"
     }
-  }, [_vm._v("Send")])])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("span", {
-    staticClass: "input-group-text rounded-0",
-    attrs: {
-      id: "addon-wrapping"
-    }
-  }, [_c("img", {
-    staticClass: "icon",
-    attrs: {
-      src: "img/download.png"
-    }
-  })]);
+  }, [_vm._v("Send")])]);
 }];
 render._withStripped = true;
 
