@@ -41,6 +41,15 @@ export default {
 <style>
 
 
+.surePopup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #00000080;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
 .wrap-input100.validate-input {
     border: 1px solid #0000003d;
     padding: 10px 6px;

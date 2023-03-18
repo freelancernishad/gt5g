@@ -83,14 +83,7 @@ import store from './store'
 import tablecom from '../table.vue'
 Vue.component('TableComponent', tablecom);
 
-import Popups from './components/users/gt5g/confirmPopup';
-Vue.component('Popups', Popups);
 
-import Preload from './components/users/gt5g/preLoad';
-Vue.component('Preload', Preload);
-
-import message from './components/users/gt5g/message';
-Vue.component('Message', message);
 
 import { Bar } from 'vue-chartjs/legacy'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'

@@ -15,6 +15,18 @@ import Notification from './helpers/Notification';
 window.Notification = Notification
 import common from './common'
 Vue.mixin(common)
+
+
+import Popups from './backend/components/users/gt5g/confirmPopup';
+Vue.component('Popups', Popups);
+
+import Preload from './backend/components/users/gt5g/preLoad';
+Vue.component('Preload', Preload);
+
+import message from './backend/components/users/gt5g/message';
+Vue.component('Message', message);
+
+
 // window._ = require('lodash');
 window.Noty = require('noty');
 try {

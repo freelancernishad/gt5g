@@ -61,7 +61,8 @@
     </div>
 
 </form>
-
+<Preload :Isactive="isActive"/>
+    <Message :Isactive="Messageactive" :Message="Message"/>
 </main>
 
 
@@ -88,6 +89,13 @@ export default {
     },
     data() {
         return {
+
+            isActive:false,
+            PackPurchase:false,
+            Messageactive:false,
+            Message:'',
+
+
             btndis: true,
             captcha: "",
             genaratedCaptcha: "",
@@ -162,24 +170,27 @@ export default {
             }
         },
         register() {
+            this.isActive = true
             // if(localStorage.getItem('dmdevice')){
-            //     Notification.customError(`This device has already have an account!`);
+            //     this.notifiyGlobal(`This device has already have an account!`);
             // }else{
             if (this.genaratedCaptcha === Number(this.captcha)) {
                 // if(this.usernameMatch!=2){
-                // Notification.customError('please Enter deferent username');
+                // this.notifiyGlobal('please Enter deferent username');
                 // }else{
                 if (this.refer != 1) {
-                    Notification.customError("Opps,Refer code is Invalid");
+                    this.notifiyGlobal("Opps,Refer code is Invalid");
                 } else {
                     // if (this.form.password === this.form.password_confirmation) {
                         axios
                             .post("api/auth/register", this.form)
                             .then((res) => {
+                                this.isActive = false
                                 if (res.data == 422) {
-                                    Notification.customError("This Phone Number Already Exist");
+                                    this.notifiyGlobal("This Phone Number Already Exist");
                                 } else if (res.data == 444) {
-                                    Notification.customError(
+
+                                    this.notifiyGlobal(
                                         `This device has already have an account!`
                                     );
                                     localStorage.setItem("dmdevice", 1);
@@ -190,7 +201,7 @@ export default {
                                         localStorage.setItem("dmdevice", 1);
                                         this.$router.push({ name: "/login" });
                                     } else {
-                                        Notification.customError(
+                                        this.notifiyGlobal(
                                             "Something want wrong. Please Try again or contact with admin"
                                         );
                                     }
@@ -201,14 +212,15 @@ export default {
                             })
                             .catch((error) => (this.errors = error.response.data.errors));
                     // } else {
-                    //     Notification.customError(
+                    //     this.notifiyGlobal(
                     //         "Password and Confirm password does not match"
                     //     );
                     // }
                 }
                 // }
             } else {
-                Notification.customError("Captcha does not match!");
+                this.isActive = false
+                this.notifiyGlobal("Captcha does not match!");
             }
             // }
         },

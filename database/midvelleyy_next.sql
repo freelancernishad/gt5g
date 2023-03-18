@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2023 at 05:36 PM
+-- Generation Time: Mar 18, 2023 at 01:24 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -515,6 +515,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('9e8374021afa18be45ca40bbaec79b56ee9d0bc7b0ebc5defa86c3e6064b7e992f90ba938a0c72b7', 23, 1, 'accessToken', '[]', 0, '2022-09-01 21:31:57', '2022-09-01 21:31:57', '2023-09-02 03:31:57'),
 ('a05d02557524cda638f988ba7b8d1efdf897ac7344bc53d81fa60430078c6ae2998e12ec2fdc6b42', 5640, 2, 'accessToken', '[]', 0, '2023-01-07 15:36:46', '2023-01-07 15:36:46', '2024-01-07 21:36:46'),
 ('a12e3d9d00731f63c100faf0df341c3deb23c357a247ffb04464b51b4a6b75c4c7ded765de764544', 4, 2, 'accessToken', '[]', 0, '2022-10-11 15:07:30', '2022-10-11 15:07:30', '2023-10-11 21:07:30'),
+('a16fa2b85816db4826e6ce7f19adc70347973bc3d3adb21851441d3075215c8bf46c4fd11c288961', 2, 2, 'accessToken', '[]', 0, '2023-03-18 11:59:53', '2023-03-18 11:59:53', '2024-03-18 17:59:53'),
 ('a1956ca8818ac565bceb2369e298135105061eab7c8cf1ed644582c824f23995a40a130ad76beef2', 5640, 2, 'accessToken', '[]', 0, '2023-02-07 05:33:01', '2023-02-07 05:33:01', '2024-02-07 11:33:01'),
 ('a33d00ce87616431d493d4953b656e892592b04f71fabf5f529ef4b9f431b08afb88ca161860bf8f', 6, 1, 'accessToken', '[]', 0, '2022-09-29 20:00:33', '2022-09-29 20:00:33', '2023-09-30 02:00:33'),
 ('a3b3d8f112dd36d0410dfa877910abb66810b87fdf4642a8d90b3822fc1c0d7f38e486f4bbb6db4c', 23, 1, 'accessToken', '[]', 0, '2022-09-01 21:04:56', '2022-09-01 21:04:56', '2023-09-02 03:04:56'),
@@ -541,9 +542,9 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('b1bd202e3ddbc26866fa28c5e86881ec40fcbcc5201cd3ad252ae2c348d874f4a03633f1385f44ca', 5638, 2, 'accessToken', '[]', 0, '2022-11-06 16:54:04', '2022-11-06 16:54:04', '2023-11-06 22:54:04'),
 ('b2478dd94dca17c242ba44b963e3bc1ce602c5ce7b2c81b9fed0973e211733cdd14792fe27ba95be', 7, 1, 'accessToken', '[]', 0, '2022-09-27 17:04:11', '2022-09-27 17:04:11', '2023-09-27 23:04:11'),
 ('b25a85086e2edd8b808ad8ff093f87092ffbf7bfd315b69d369e4bf63ac79aef88f0fdb244e2ee8d', 12, 1, 'accessToken', '[]', 0, '2022-08-29 05:50:10', '2022-08-29 05:50:10', '2023-08-29 11:50:10'),
-('b27416c9987bde96ddb9d86edac2ecfd89583126a67f339a4a64a9825432b9b55f86b7c975658e63', 5641, 2, 'accessToken', '[]', 0, '2023-03-08 15:29:04', '2023-03-08 15:29:04', '2024-03-08 21:29:04'),
-('b4701218cf72426b92c09537911f44153c77d32d8a19fda82021c5a91fc5cb7f9856a27979e6b96d', 5640, 2, 'accessToken', '[]', 0, '2023-02-09 09:22:19', '2023-02-09 09:22:19', '2024-02-09 15:22:19');
+('b27416c9987bde96ddb9d86edac2ecfd89583126a67f339a4a64a9825432b9b55f86b7c975658e63', 5641, 2, 'accessToken', '[]', 0, '2023-03-08 15:29:04', '2023-03-08 15:29:04', '2024-03-08 21:29:04');
 INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('b4701218cf72426b92c09537911f44153c77d32d8a19fda82021c5a91fc5cb7f9856a27979e6b96d', 5640, 2, 'accessToken', '[]', 0, '2023-02-09 09:22:19', '2023-02-09 09:22:19', '2024-02-09 15:22:19'),
 ('b4f42126dc8ab789fd1d6d4c7750cfc001a221af1cd06717a95a735eff130c2522cd678b931b2748', 20, 1, 'accessToken', '[]', 0, '2022-09-02 04:23:17', '2022-09-02 04:23:17', '2023-09-02 10:23:17'),
 ('b650e841c925272dd648e5b29c6190f8521f1b2752399f36400f528d631efd914c16f40f2964970d', 7, 1, 'accessToken', '[]', 0, '2022-08-12 05:35:27', '2022-08-12 05:35:27', '2023-08-12 11:35:27'),
 ('b654c628c7c529df98e6028ed2eedf0b8a88d0947319f59cc1cf2e83e465a5a1c67eb65b36cb9750', 4, 2, 'accessToken', '[]', 0, '2022-10-06 14:25:33', '2022-10-06 14:25:33', '2023-10-06 20:25:33'),
@@ -781,8 +782,8 @@ CREATE TABLE `package_buys` (
 
 INSERT INTO `package_buys` (`id`, `packageId`, `userid`, `price`, `earn`, `duration`, `startDate`, `endDate`, `status`, `created_at`, `updated_at`) VALUES
 (2, '1', '2', '1000', '100', '30', '2023-03-15', '2023-04-14', 'Active', '2023-03-15 07:21:23', '2023-03-15 07:21:23'),
-(3, '2', '2', '2000', '200', '60', '2023-03-17', '2023-05-16', 'Active', '2023-03-17 04:55:28', '2023-03-17 04:55:28'),
-(4, '1', '2', '1000', '100', '30', '2023-03-17', '2023-04-16', 'Active', '2023-03-17 16:14:16', '2023-03-17 16:14:16'),
+(3, '2', '2', '2000', '200', '60', '2023-03-17', '2023-03-17', 'Deactive', '2023-03-17 04:55:28', '2023-03-17 04:55:28'),
+(4, '1', '2', '1000', '100', '30', '2023-03-17', '2023-03-17', 'Deactive', '2023-03-17 16:14:16', '2023-03-17 16:14:16'),
 (5, '1', '2', '1000', '100', '30', '2023-03-17', '2023-04-16', 'Active', '2023-03-17 16:18:32', '2023-03-17 16:18:32');
 
 -- --------------------------------------------------------
@@ -940,7 +941,8 @@ INSERT INTO `tasks` (`id`, `orderNumber`, `user_id`, `blog_id`, `task_comisition
 (19, NULL, '2', '2', '100', '2023-03-17', '2023-03-17 05:07:56', '2023-03-17 05:07:56'),
 (20, NULL, '2', '3', '200', '2023-03-17', '2023-03-17 05:07:56', '2023-03-17 05:07:56'),
 (21, NULL, '2', '2', '100', '2023-03-17', '2023-03-17 06:03:01', '2023-03-17 06:03:01'),
-(22, NULL, '2', '3', '200', '2023-03-17', '2023-03-17 06:03:01', '2023-03-17 06:03:01');
+(22, NULL, '2', '3', '200', '2023-03-17', '2023-03-17 06:03:01', '2023-03-17 06:03:01'),
+(23, NULL, '2', NULL, '5', '2023-03-18', '2023-03-18 12:15:43', '2023-03-18 12:15:43');
 
 -- --------------------------------------------------------
 
@@ -1071,7 +1073,8 @@ INSERT INTO `transitions` (`id`, `user_id`, `amount`, `charge`, `post_balance`, 
 (102, '1', '20', '0', '7571.50', 'increase', '', 'refer_commisition', 'L3', '2023-03-17 16:14:16', '2023-03-17 16:14:16'),
 (103, '2', '1000', '0', '7000', 'decrease', '', 'package', 'purchase', '2023-03-17 16:14:16', '2023-03-17 16:14:16'),
 (104, '1', '100', '0', '7671.50', 'increase', '', 'refer_commisition', 'L1', '2023-03-17 16:18:32', '2023-03-17 16:18:32'),
-(105, '2', '1000', '0', '6000', 'decrease', '', 'package', 'purchase', '2023-03-17 16:18:32', '2023-03-17 16:18:32');
+(105, '2', '1000', '0', '6000', 'decrease', '', 'package', 'purchase', '2023-03-17 16:18:32', '2023-03-17 16:18:32'),
+(106, '2', '5', '0', '6005.00', 'increase', 'U2Qryg5PTH', 'Check In', '', '2023-03-18 12:15:43', '2023-03-18 12:15:43');
 
 -- --------------------------------------------------------
 
@@ -1087,6 +1090,7 @@ CREATE TABLE `users` (
   `ref_by` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `plan_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `receiveable` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `checkin` int(11) NOT NULL DEFAULT 1,
   `task` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `balance` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `depsit_time` int(11) DEFAULT NULL,
@@ -1115,11 +1119,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `mobile`, `username`, `ref_by`, `plan_id`, `receiveable`, `task`, `balance`, `depsit_time`, `depsit_amount`, `withdraw_amount`, `nidfront`, `nidback`, `address`, `email`, `role`, `email_verified_at`, `password`, `withdrawpass`, `Bank_Name`, `Bank_account`, `ip`, `visitorId`, `last_sessid`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'New Customer', '01981175973', '1234', '1234', '3', NULL, '10', '7671.50', NULL, NULL, NULL, NULL, NULL, NULL, '1664220157@gmail.com', 'admin', NULL, '$2y$10$ALPIw3AwWeelxkUSebSvWuyGS1OgHnnAa3nrAG2PgYA6LWX2GmMDy', '123456', NULL, NULL, '103.127.177.115', NULL, NULL, 'active', NULL, '2022-09-26 13:22:37', '2023-03-17 16:18:32'),
-(2, 'New Customer', '+8801909756552', '1235', '1234', '1', '0', '95', '6000', NULL, NULL, NULL, NULL, NULL, NULL, '1678783108@gmail.com', 'reporter', NULL, '$2y$10$x5aHkhDXboedaGC2.wPtVel2unsIzIF6om7TlmV2AFAFwtXV2Bv0q', '123456', '1', '01909756552', '127.0.0.1', NULL, NULL, 'active', NULL, '2023-03-14 08:38:28', '2023-03-17 16:18:32'),
-(3, 'New Customer', '+8801909756553', '1236', '1235', '2', NULL, '10', '4715.00', NULL, NULL, NULL, NULL, NULL, NULL, '1678858584@gmail.com', 'reporter', NULL, '$2y$10$LjM1DyDqhrG.oyhxUOx3puS083GKeSBSjxfkkbCA2XsMPfSejFswm', '123456', NULL, NULL, '127.0.0.1', NULL, NULL, 'active', NULL, '2023-03-15 05:36:24', '2023-03-15 06:09:34'),
-(4, 'New Customer', '01909756552', '1237', '1236', '2', NULL, '10', '1300', NULL, NULL, NULL, NULL, NULL, NULL, '1678860505@gmail.com', 'reporter', NULL, '$2y$10$EWikqwU6FMep1hsyZvKKHOk1ul5i/1edsMMgyoH10Or0a.Gp7Udn.', '123456', NULL, NULL, '127.0.0.1', NULL, NULL, 'active', NULL, '2023-03-15 06:08:26', '2023-03-15 06:09:34');
+INSERT INTO `users` (`id`, `name`, `mobile`, `username`, `ref_by`, `plan_id`, `receiveable`, `checkin`, `task`, `balance`, `depsit_time`, `depsit_amount`, `withdraw_amount`, `nidfront`, `nidback`, `address`, `email`, `role`, `email_verified_at`, `password`, `withdrawpass`, `Bank_Name`, `Bank_account`, `ip`, `visitorId`, `last_sessid`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'New Customer', '01981175973', '1234', '1234', '3', NULL, 1, '10', '7671.50', NULL, NULL, NULL, NULL, NULL, NULL, '1664220157@gmail.com', 'admin', NULL, '$2y$10$ALPIw3AwWeelxkUSebSvWuyGS1OgHnnAa3nrAG2PgYA6LWX2GmMDy', '123456', NULL, NULL, '103.127.177.115', NULL, NULL, 'active', NULL, '2022-09-26 13:22:37', '2023-03-17 16:18:32'),
+(2, 'New Customer', '+8801909756552', '1235', '1234', '3', '1100', 0, '95', '6005.00', NULL, NULL, NULL, NULL, NULL, NULL, '1678783108@gmail.com', 'reporter', NULL, '$2y$10$x5aHkhDXboedaGC2.wPtVel2unsIzIF6om7TlmV2AFAFwtXV2Bv0q', '123456', '1', '01909756552', '127.0.0.1', NULL, NULL, 'active', NULL, '2023-03-14 08:38:28', '2023-03-18 12:15:43'),
+(3, 'New Customer', '+8801909756553', '1236', '1235', '2', NULL, 1, '10', '4715.00', NULL, NULL, NULL, NULL, NULL, NULL, '1678858584@gmail.com', 'reporter', NULL, '$2y$10$LjM1DyDqhrG.oyhxUOx3puS083GKeSBSjxfkkbCA2XsMPfSejFswm', '123456', NULL, NULL, '127.0.0.1', NULL, NULL, 'active', NULL, '2023-03-15 05:36:24', '2023-03-15 06:09:34'),
+(4, 'New Customer', '01909756552', '1237', '1236', '2', NULL, 1, '10', '1300', NULL, NULL, NULL, NULL, NULL, NULL, '1678860505@gmail.com', 'reporter', NULL, '$2y$10$EWikqwU6FMep1hsyZvKKHOk1ul5i/1edsMMgyoH10Or0a.Gp7Udn.', '123456', NULL, NULL, '127.0.0.1', NULL, NULL, 'active', NULL, '2023-03-15 06:08:26', '2023-03-15 06:09:34');
 
 -- --------------------------------------------------------
 
@@ -1415,13 +1419,13 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `transitions`
 --
 ALTER TABLE `transitions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT for table `users`

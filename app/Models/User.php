@@ -24,6 +24,7 @@ class User extends Authenticatable
         'ref_by',
         'plan_id',
         'receiveable',
+        'checkin',
         'task',
         'balance',
         'depsit_time',

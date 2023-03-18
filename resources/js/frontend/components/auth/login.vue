@@ -36,6 +36,9 @@
     </div>
 </form>
 
+<Preload :Isactive="isActive"/>
+    <Message :Isactive="Messageactive" :Message="Message"/>
+
 </main>
 
     <!-- <section id="bigbg">
@@ -88,7 +91,10 @@ export default {
 
     data() {
         return {
-
+            isActive:false,
+            PackPurchase:false,
+            Messageactive:false,
+            Message:'',
 
 
             emailLogin: "",
@@ -121,7 +127,7 @@ export default {
         },
 
         login() {
-            this.loadLogin = true
+            this.isActive =true;
 
             if (this.form.mobile == "" || this.form.password == "") {
                 this.emptyFields = true;
@@ -132,14 +138,14 @@ export default {
 
 
                         if (res.data == 0) {
-                            Notification.customError('Please Enter Valid Phone Number and Password');
-                            this.loadLogin = false
+                            this.isActive = false
+                            this.notifiyGlobal('Please Enter Valid Phone Number and Password');
                         } else if (res.data == 422) {
-                            Notification.customError('Your Account Has Been Banded!');
-                            this.loadLogin = false
+                            this.isActive = false
+                            this.notifiyGlobal('Your Account Has Been Banded!');
                         } else if (res.data == 444) {
-                            Notification.customError('You Cant Login Multiple account same device!');
-                            this.loadLogin = false
+                            this.isActive = false
+                            this.notifiyGlobal('You Cant Login Multiple account same device!');
                             localStorage.setItem('dmdevice', 1)
                         } else {
 
@@ -153,8 +159,8 @@ export default {
                             } else {
                                 window.location.href = '/dashboard/user'
                             }
-
-                            Notification.customSuccess('Signed in successfully Complete');
+                            this.isActive = false
+                            this.notifiyGlobal('Signed in successfully Complete');
 
                             // this.$router.push({name: 'home'})
                             // window.location.href = '/dashboard'

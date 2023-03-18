@@ -16,7 +16,18 @@ export default {
     methods: {
         setLang(){
             localStorage.setItem('language',this.$i18n.locale)
+
         },
+
+        notifiyGlobal(mess){
+            this.Messageactive = true
+            this.Message = mess;
+            setTimeout(() => {
+                this.Messageactive = false
+            }, 1000);
+        },
+
+
         async callApi(method, url, dataObj){
 
             this.Frontloader = true

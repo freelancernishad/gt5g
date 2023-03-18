@@ -1,7 +1,12 @@
 <?php
 
+use App\Models\Task;
+use App\Models\User;
+use App\Models\Package;
+use App\Models\PackageBuy;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
@@ -11,17 +16,13 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\GatewayController;
+use App\Http\Controllers\PackageController;
 use App\Http\Controllers\SettingController;
 use  App\Http\Controllers\api\authController;
 use App\Http\Controllers\TransitionController;
 use App\Http\Controllers\UddoktapayController;
 use App\Http\Controllers\WithdrawalController;
 use App\Http\Controllers\BlogCategoryController;
-use App\Http\Controllers\PackageController;
-use App\Models\Package;
-use App\Models\PackageBuy;
-use App\Models\User;
-use Illuminate\Support\Facades\Log;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,44 +41,64 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::get('auto/run', function (Request $request) {
-
-    $package_buys = PackageBuy::where(['status'=>'Active'])->get();
-
-
-    foreach ($package_buys as $value) {
-
-        $PackageBuy = PackageBuy::find($value->id);
-
-    $nowDate =  strtotime(date('Y-m-d'));
-    $endDate =  strtotime($value->endDate);
-    if($nowDate>$endDate){
-        $PackageBuy->update(['status'=>'Deactive']);
-    }else{
-        $id = $value->userid;
-        $user = User::find($id);
-        $earn = $value->earn;
-        $receiveable = $user->receiveable;
-        $nowReceiveAble = $receiveable+$earn;
-        $user->update(['receiveable'=>$nowReceiveAble]);
-    }
-
-
-
-
-
-
-    }
-
-
-
-});
+    Route::get('auto/run', function (Request $request) {
+        $package_buys = PackageBuy::where(['status'=>'Active'])->get();
+        foreach ($package_buys as $value) {
+            $PackageBuy = PackageBuy::find($value->id);
+            $nowDate =  strtotime(date('Y-m-d'));
+            $endDate =  strtotime($value->endDate);
+            if($nowDate>$endDate){
+                $PackageBuy->update(['status'=>'Deactive']);
+            }else{
+                $id = $value->userid;
+                $user = User::find($id);
+                $earn = $value->earn;
+                $receiveable = $user->receiveable;
+                $nowReceiveAble = $receiveable+$earn;
+                $user->update(['receiveable'=>$nowReceiveAble]);
+            }
+        }
+    });
 
 Route::post('refound', function (Request $request) {
 
     return $request->all();
 
 });
+
+
+    Route::post('daily/check/in', function (Request $request) {
+
+        $user_id = $request->user_id;
+        $user = User::find($user_id);
+
+        $checkin = $user->checkin;
+
+
+        $task_comisition = rand(1,20);
+
+        if($checkin){
+            $newBalance = balanceIncrease($user->balance, $task_comisition);
+            $user->update([
+                'balance'=>$newBalance,
+                'checkin'=>0,
+                'plan_id' => planId($newBalance),
+            ]);
+            transitionCreate($user_id,$task_comisition,0,$newBalance,'increase',quickRandom(10),'Check In','');
+
+            $data = [
+                'task_comisition'=>$task_comisition,
+                'user_id'=>$user_id,
+            ];
+            $data['date'] = date('Y-m-d');
+            Task::create($data);
+            return 1;
+        }
+
+        return 0;
+
+
+    });
 
 // Route::post('webhook', function (Request $request) {
 

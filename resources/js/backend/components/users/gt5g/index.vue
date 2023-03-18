@@ -44,10 +44,10 @@
                 <img :src="$asseturl+'img/3.d052248f.png'" alt="" style="width: 36px; height: 36px;">
                 <p class="mb-0">How do</p>
             </router-link>
-            <router-link :to="{name:'Recharge'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25">
+            <span @click="dailyCheckIn" class="bg-white fw-bold py-3 shadow-lg text-center w-25">
                 <img :src="$asseturl+'img/5.1f17c1e9.png'" alt="" style="width: 36px; height: 36px;">
                 <p class="mb-0">Check in</p>
-            </router-link>
+            </span>
         </section>
 
 
@@ -129,32 +129,28 @@ export default {
                 var res = await this.callApi('post',`/api/package/upgrade/${userid}`,packag)
 
                 if(res.data==1){
-                    this.Messageactive = true
-                    this.Message = 'Purchase Success';
-                    setTimeout(() => {
-                        this.Messageactive = false
-                    }, 1000);
-
-                    // Swal.fire(
-                    // 'Success!',
-                    // 'Purchase Successfully completed',
-                    // 'success'
-                    // )
+                    this.notifiyGlobal('Purchase Success')
                 }else if(res.data==44){
-                    this.Messageactive = true
-                    this.Message = 'You dont have enough balance';
-                    setTimeout(() => {
-                        this.Messageactive = false
-                    }, 1000);
-                    // Swal.fire(
-                    // "Opps!",
-                    // "You don't have enough balance",
-                    // "error"
-                    // )
+                    this.notifiyGlobal('You dont have enough balance')
                 }
 
                 this.isActive =false;
-        }
+        },
+        async dailyCheckIn(){
+            this.isActive =true;
+            var userid = localStorage.getItem('userid');
+            var res = await this.callApi('post',`/api/daily/check/in?user_id=${userid}`,[]);
+            this.isActive =false;
+            if(res.data==1){
+                this.notifiyGlobal('Daily checked in completed')
+            }else{
+                this.notifiyGlobal('Come Back Tomorrow')
+            }
+
+        },
+
+
+
 
 
 
