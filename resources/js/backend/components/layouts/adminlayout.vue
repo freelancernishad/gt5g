@@ -124,10 +124,10 @@
                         </li>
 
 
-                        <li  class="nav-item" @click="submenu(0)" >
+                        <!-- <li  class="nav-item" @click="submenu(0)" >
                             <router-link :to="{name:'MembersPlans'}" class="nav-link"><i
                                     class="flaticon-dashboard"></i><span>Membership Plans</span></router-link>
-                        </li>
+                        </li> -->
 
 
 
