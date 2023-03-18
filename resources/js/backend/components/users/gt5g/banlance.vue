@@ -43,7 +43,7 @@
         </section>
     </main>
     <Preload :Isactive="isActive"/>
-
+    <Message :Isactive="Messageactive" :Message="Message" />
     </div>
 </template>
 

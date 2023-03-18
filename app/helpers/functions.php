@@ -220,3 +220,44 @@ function planId($balance){
 
     return substr(str_shuffle(str_repeat($pool, 5)), 0, $length);
 }
+
+
+
+
+function SmsNocSmsSend($deccription = '', $applicant_mobile = '1909756552')
+{
+
+    $smsnocapikey = '177|umN42gvIDUBrl3sQiJW4Q0mkh2tHWBx2Gyguum2h ';
+    $smsnocsenderid = '1234';
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://app.smsnoc.com/api/v3/sms/send',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+"recipient":"880'.$applicant_mobile.'",
+"sender_id":"'.$smsnocsenderid.'",
+"type":"plain",
+"message":"'.$deccription.'"
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json',
+    'Accept: application/json',
+    'Authorization: Bearer '.$smsnocapikey.''
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+// echo $response;
+
+}
+

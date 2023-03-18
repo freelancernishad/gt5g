@@ -13,7 +13,7 @@
         <div class="flex-nowrap input-group px-3 mb-3">
             <span class="input-group-text rounded-0" id="addon-wrapping">
                 <img :src="$asseturl+'img/phone.png'" class="icon"></span>
-                <input type="tel" class="form-control rounded-0" placeholder="+880" aria-label="Username" v-model="form.mobile"  aria-describedby="addon-wrapping">
+                <input type="tel" class="form-control rounded-0" placeholder="+880" aria-label="Username" minlength="10" maxlength="10" @keyup="checkstart" v-model="form.mobile"  aria-describedby="addon-wrapping">
         </div>
         <div class="flex-nowrap input-group px-3">
             <span class="input-group-text rounded-0" id="addon-wrapping">
@@ -30,12 +30,12 @@
             <div class="flex-nowrap input-group px-3">
                 <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
                         class="icon"></span>
-                <input type="text" class="form-control rounded-0" placeholder="SMS Code"
-                    aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control rounded-0" placeholder="SMS Code" v-model="otp"
+                    aria-label="Username" aria-describedby="addon-wrapping" required>
             </div>
             <div class="w-100">
-                <button type="button" class="btn fw-bold  rounded-0"
-                    style="background: #f1f1f1; color: #333; border: 2px solid #0036ca;  width: 93%;">Send</button>
+                <button type="button" class="btn fw-bold  rounded-0" @click="sentOtp"
+                    style="background: #f1f1f1; color: #333; border: 2px solid #0036ca;  width: 93%;">{{ otpsent }}</button>
             </div>
         </div>
         <div class="d-flex gap-5 pt-3">
@@ -94,10 +94,12 @@ export default {
             PackPurchase:false,
             Messageactive:false,
             Message:'',
+            otp:'',
 
 
             btndis: true,
             captcha: "",
+            otpsent: "Send",
             genaratedCaptcha: "",
             mobileCode: null,
             form: {
@@ -123,6 +125,55 @@ export default {
         // setLang(){
         //     localStorage.setItem('language',this.$i18n.locale)
         // },
+
+
+        checkstart(){
+            if(this.form.mobile!=''){
+                if(this.form.mobile.charAt(0)==1){
+                }else{
+                    this.form.mobile = '';
+                    this.notifiyGlobal(`Mobile number must be start '1'`);
+                }
+            }
+        },
+
+        async sentOtp(){
+
+            this.isActive = true
+            if(this.form.mobile.length>10){
+                this.isActive = false
+                this.notifiyGlobal(`Mobile Number must be contain 10 digit`);
+            }else{
+
+
+                if(this.form.mobile.charAt(0)==1){
+                    var res = await this.callApi('post',`/api/sent/otp?mobile=${this.form.mobile}`,[]);
+                    this.isActive = false
+                    this.otpsent ='Sent Again';
+
+                    if(res.data=='cross limit'){
+                        this.notifiyGlobal(`You can't sent any otp today!`);
+                    }else if(res.data=='time not finished'){
+                        this.notifiyGlobal(`Please Wait for sent again Otp`);
+                    }else{
+
+                        this.notifiyGlobal(`Otp Successfully sent you mobile number`);
+                    }
+
+                }else{
+                    this.isActive = false
+                    this.notifiyGlobal(`Mobile number must be start '1'`);
+                }
+
+        }
+
+
+        },
+
+
+
+
+
 
         async usernamecheck() {
             if (this.form.username == "") {
@@ -169,8 +220,20 @@ export default {
                 }
             }
         },
-        register() {
+      async  register() {
             this.isActive = true
+
+            var otpcheck = await this.callApi('post',`/api/check/otp?mobile=${this.form.mobile}&otp=${this.otp}`,[]);
+
+            if(otpcheck.data==0){
+                this.isActive = false
+                this.notifiyGlobal("Otp does not match!");
+            }else{
+
+
+
+
+
             // if(localStorage.getItem('dmdevice')){
             //     this.notifiyGlobal(`This device has already have an account!`);
             // }else{
@@ -197,7 +260,7 @@ export default {
                                 } else {
                                     // console.log(res)
                                     if (res.status == 201) {
-                                        Notification.customSuccess("Registration Success");
+                                        this.notifiyGlobal("Registration Success");
                                         localStorage.setItem("dmdevice", 1);
                                         this.$router.push({ name: "/login" });
                                     } else {
@@ -223,6 +286,7 @@ export default {
                 this.notifiyGlobal("Captcha does not match!");
             }
             // }
+        }
         },
     },
 };

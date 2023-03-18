@@ -2349,8 +2349,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       PackPurchase: false,
       Messageactive: false,
       Message: '',
+      otp: '',
       btndis: true,
       captcha: "",
+      otpsent: "Send",
       genaratedCaptcha: "",
       mobileCode: null,
       form: {
@@ -2376,7 +2378,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     // setLang(){
     //     localStorage.setItem('language',this.$i18n.locale)
     // },
-    usernamecheck: function usernamecheck() {
+    checkstart: function checkstart() {
+      if (this.form.mobile != '') {
+        if (this.form.mobile.charAt(0) == 1) {} else {
+          this.form.mobile = '';
+          this.notifiyGlobal("Mobile number must be start '1'");
+        }
+      }
+    },
+    sentOtp: function sentOtp() {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -2385,29 +2395,51 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                if (!(_this.form.username == "")) {
-                  _context.next = 4;
+                _this.isActive = true;
+
+                if (!(_this.form.mobile.length > 10)) {
+                  _context.next = 6;
                   break;
                 }
 
-                _this.usernameMatch = 0;
-                _context.next = 8;
+                _this.isActive = false;
+
+                _this.notifiyGlobal("Mobile Number must be contain 10 digit");
+
+                _context.next = 17;
                 break;
 
-              case 4:
-                _context.next = 6;
-                return _this.callApi("get", "/api/count/username/check?username=".concat(_this.form.username), []);
-
               case 6:
-                res = _context.sent;
-
-                if (res.data == 0) {
-                  _this.usernameMatch = 2;
-                } else {
-                  _this.usernameMatch = 1;
+                if (!(_this.form.mobile.charAt(0) == 1)) {
+                  _context.next = 15;
+                  break;
                 }
 
-              case 8:
+                _context.next = 9;
+                return _this.callApi('post', "/api/sent/otp?mobile=".concat(_this.form.mobile), []);
+
+              case 9:
+                res = _context.sent;
+                _this.isActive = false;
+                _this.otpsent = 'Sent Again';
+
+                if (res.data == 'cross limit') {
+                  _this.notifiyGlobal("You can't sent any otp today!");
+                } else if (res.data == 'time not finished') {
+                  _this.notifiyGlobal("Please Wait for sent again Otp");
+                } else {
+                  _this.notifiyGlobal("Otp Successfully sent you mobile number");
+                }
+
+                _context.next = 17;
+                break;
+
+              case 15:
+                _this.isActive = false;
+
+                _this.notifiyGlobal("Mobile number must be start '1'");
+
+              case 17:
               case "end":
                 return _context.stop();
             }
@@ -2415,7 +2447,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    countryList: function countryList() {
+    usernamecheck: function usernamecheck() {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
@@ -2424,15 +2456,29 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _context2.next = 2;
-                return _this2.callApi("get", "".concat(_this2.$asseturl, "CountryCodes.json"), []);
+                if (!(_this2.form.username == "")) {
+                  _context2.next = 4;
+                  break;
+                }
 
-              case 2:
-                res = _context2.sent;
-                // console.log(res)
-                _this2.codes = res.data;
+                _this2.usernameMatch = 0;
+                _context2.next = 8;
+                break;
 
               case 4:
+                _context2.next = 6;
+                return _this2.callApi("get", "/api/count/username/check?username=".concat(_this2.form.username), []);
+
+              case 6:
+                res = _context2.sent;
+
+                if (res.data == 0) {
+                  _this2.usernameMatch = 2;
+                } else {
+                  _this2.usernameMatch = 1;
+                }
+
+              case 8:
               case "end":
                 return _context2.stop();
             }
@@ -2440,18 +2486,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2);
       }))();
     },
-    addcountry: function addcountry() {
+    countryList: function countryList() {
       var _this3 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+        var res;
         return _regeneratorRuntime().wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                // this.form.mobile = this.form.country
-                _this3.mobileCode = _this3.form.country;
+                _context3.next = 2;
+                return _this3.callApi("get", "".concat(_this3.$asseturl, "CountryCodes.json"), []);
 
-              case 1:
+              case 2:
+                res = _context3.sent;
+                // console.log(res)
+                _this3.codes = res.data;
+
+              case 4:
               case "end":
                 return _context3.stop();
             }
@@ -2459,38 +2511,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee3);
       }))();
     },
-    refercheck: function refercheck() {
+    addcountry: function addcountry() {
       var _this4 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
-        var res;
         return _regeneratorRuntime().wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
-                if (!(_this4.form.ref_by == "")) {
-                  _context4.next = 4;
-                  break;
-                }
+                // this.form.mobile = this.form.country
+                _this4.mobileCode = _this4.form.country;
 
-                _this4.refer = 0;
-                _context4.next = 8;
-                break;
-
-              case 4:
-                _context4.next = 6;
-                return _this4.callApi("get", "/api/count/username/check?username=".concat(_this4.form.ref_by), []);
-
-              case 6:
-                res = _context4.sent;
-
-                if (res.data == 0) {
-                  _this4.refer = 2;
-                } else {
-                  _this4.refer = 1;
-                }
-
-              case 8:
+              case 1:
               case "end":
                 return _context4.stop();
             }
@@ -2498,60 +2530,127 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee4);
       }))();
     },
-    register: function register() {
+    refercheck: function refercheck() {
       var _this5 = this;
 
-      this.isActive = true; // if(localStorage.getItem('dmdevice')){
-      //     this.notifiyGlobal(`This device has already have an account!`);
-      // }else{
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+        var res;
+        return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                if (!(_this5.form.ref_by == "")) {
+                  _context5.next = 4;
+                  break;
+                }
 
-      if (this.genaratedCaptcha === Number(this.captcha)) {
-        // if(this.usernameMatch!=2){
-        // this.notifiyGlobal('please Enter deferent username');
-        // }else{
-        if (this.refer != 1) {
-          this.notifiyGlobal("Opps,Refer code is Invalid");
-        } else {
-          // if (this.form.password === this.form.password_confirmation) {
-          axios.post("api/auth/register", this.form).then(function (res) {
-            _this5.isActive = false;
+                _this5.refer = 0;
+                _context5.next = 8;
+                break;
 
-            if (res.data == 422) {
-              _this5.notifiyGlobal("This Phone Number Already Exist");
-            } else if (res.data == 444) {
-              _this5.notifiyGlobal("This device has already have an account!");
+              case 4:
+                _context5.next = 6;
+                return _this5.callApi("get", "/api/count/username/check?username=".concat(_this5.form.ref_by), []);
 
-              localStorage.setItem("dmdevice", 1);
-            } else {
-              // console.log(res)
-              if (res.status == 201) {
-                Notification.customSuccess("Registration Success");
-                localStorage.setItem("dmdevice", 1);
+              case 6:
+                res = _context5.sent;
 
-                _this5.$router.push({
-                  name: "/login"
-                });
-              } else {
-                _this5.notifiyGlobal("Something want wrong. Please Try again or contact with admin");
-              } // User.responseAfterLogin(res)
+                if (res.data == 0) {
+                  _this5.refer = 2;
+                } else {
+                  _this5.refer = 1;
+                }
 
-            } // console.log(res.data)
-            // User.responseAfterLogin(res)
+              case 8:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5);
+      }))();
+    },
+    register: function register() {
+      var _this6 = this;
 
-          })["catch"](function (error) {
-            return _this5.errors = error.response.data.errors;
-          }); // } else {
-          //     this.notifiyGlobal(
-          //         "Password and Confirm password does not match"
-          //     );
-          // }
-        } // }
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+        var otpcheck;
+        return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+          while (1) {
+            switch (_context6.prev = _context6.next) {
+              case 0:
+                _this6.isActive = true;
+                _context6.next = 3;
+                return _this6.callApi('post', "/api/check/otp?mobile=".concat(_this6.form.mobile, "&otp=").concat(_this6.otp), []);
 
-      } else {
-        this.isActive = false;
-        this.notifiyGlobal("Captcha does not match!");
-      } // }
+              case 3:
+                otpcheck = _context6.sent;
 
+                if (otpcheck.data == 0) {
+                  _this6.isActive = false;
+
+                  _this6.notifiyGlobal("Otp does not match!");
+                } else {
+                  // if(localStorage.getItem('dmdevice')){
+                  //     this.notifiyGlobal(`This device has already have an account!`);
+                  // }else{
+                  if (_this6.genaratedCaptcha === Number(_this6.captcha)) {
+                    // if(this.usernameMatch!=2){
+                    // this.notifiyGlobal('please Enter deferent username');
+                    // }else{
+                    if (_this6.refer != 1) {
+                      _this6.notifiyGlobal("Opps,Refer code is Invalid");
+                    } else {
+                      // if (this.form.password === this.form.password_confirmation) {
+                      axios.post("api/auth/register", _this6.form).then(function (res) {
+                        _this6.isActive = false;
+
+                        if (res.data == 422) {
+                          _this6.notifiyGlobal("This Phone Number Already Exist");
+                        } else if (res.data == 444) {
+                          _this6.notifiyGlobal("This device has already have an account!");
+
+                          localStorage.setItem("dmdevice", 1);
+                        } else {
+                          // console.log(res)
+                          if (res.status == 201) {
+                            _this6.notifiyGlobal("Registration Success");
+
+                            localStorage.setItem("dmdevice", 1);
+
+                            _this6.$router.push({
+                              name: "/login"
+                            });
+                          } else {
+                            _this6.notifiyGlobal("Something want wrong. Please Try again or contact with admin");
+                          } // User.responseAfterLogin(res)
+
+                        } // console.log(res.data)
+                        // User.responseAfterLogin(res)
+
+                      })["catch"](function (error) {
+                        return _this6.errors = error.response.data.errors;
+                      }); // } else {
+                      //     this.notifiyGlobal(
+                      //         "Password and Confirm password does not match"
+                      //     );
+                      // }
+                    } // }
+
+                  } else {
+                    _this6.isActive = false;
+
+                    _this6.notifiyGlobal("Captcha does not match!");
+                  } // }
+
+                }
+
+              case 5:
+              case "end":
+                return _context6.stop();
+            }
+          }
+        }, _callee6);
+      }))();
     }
   }
 });
@@ -3143,12 +3242,15 @@ var render = function render() {
       type: "tel",
       placeholder: "+880",
       "aria-label": "Username",
+      minlength: "10",
+      maxlength: "10",
       "aria-describedby": "addon-wrapping"
     },
     domProps: {
       value: _vm.form.mobile
     },
     on: {
+      keyup: _vm.checkstart,
       input: function input($event) {
         if ($event.target.composing) return;
 
@@ -3242,14 +3344,46 @@ var render = function render() {
       src: _vm.$asseturl + "img/download.png"
     }
   })]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.otp,
+      expression: "otp"
+    }],
     staticClass: "form-control rounded-0",
     attrs: {
       type: "text",
       placeholder: "SMS Code",
       "aria-label": "Username",
-      "aria-describedby": "addon-wrapping"
+      "aria-describedby": "addon-wrapping",
+      required: ""
+    },
+    domProps: {
+      value: _vm.otp
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.otp = $event.target.value;
+      }
     }
-  })]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "w-100"
+  }, [_c("button", {
+    staticClass: "btn fw-bold rounded-0",
+    staticStyle: {
+      background: "#f1f1f1",
+      color: "#333",
+      border: "2px solid #0036ca",
+      width: "93%"
+    },
+    attrs: {
+      type: "button"
+    },
+    on: {
+      click: _vm.sentOtp
+    }
+  }, [_vm._v(_vm._s(_vm.otpsent))])])]), _vm._v(" "), _c("div", {
     staticClass: "d-flex gap-5 pt-3"
   }, [_c("div", {
     staticClass: "flex-nowrap input-group px-3"
@@ -3331,25 +3465,7 @@ var render = function render() {
   })], 1);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "w-100"
-  }, [_c("button", {
-    staticClass: "btn fw-bold rounded-0",
-    staticStyle: {
-      background: "#f1f1f1",
-      color: "#333",
-      border: "2px solid #0036ca",
-      width: "93%"
-    },
-    attrs: {
-      type: "button"
-    }
-  }, [_vm._v("Send")])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 

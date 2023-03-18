@@ -23,6 +23,7 @@ use App\Http\Controllers\TransitionController;
 use App\Http\Controllers\UddoktapayController;
 use App\Http\Controllers\WithdrawalController;
 use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\OtpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -137,6 +138,11 @@ Route::get('getPayment/data', [GatewayController::class,'getPayment']);
 
 
 Route::get('count/username/check', [authController::class,'usernamecheck']);
+
+Route::post('sent/otp',[OtpController::class,'setotp']);
+Route::post('check/otp',[OtpController::class,'checkotp']);
+
+
 Route::group([
     'middleware' => 'auth:api'
 ], function () {
@@ -154,6 +160,8 @@ Route::get('get/task/list/{id}',[PackageController::class,'tasksList']);
 
 Route::get('get/roles',[authController::class,'getRoles']);
 Route::post('role/assign',[authController::class,'roleAssign']);
+
+
 
 
 Route::get('user/multi/refer',[UserController::class,'referlist']);

@@ -7,6 +7,7 @@
 
 
 
+
   <header class="text-center">
     <img :src="$asseturl+'Recharge/onepayfailed.png'" alt="" style=" width: 71px;margin-top: 34px;">
 </header>
@@ -14,7 +15,7 @@
    <div class="text-center">
     <p style="font-size: 20px;font-weight: 600;">অর্ডার পেমেন্ট অস্বাভাবিক</p>
    </div>
-<router-link :to="{name:'Authuser'}" style="width: 100%;margin: 20px 0px;background: black;color: white;padding: 8px 4px;border-radius: 30px;display: block;text-align: center;">অর্ডার বন্ধ করুন</router-link>
+<a href="/dashboard/user" style="width: 100%;margin: 20px 0px;background: black;color: white;padding: 8px 4px;border-radius: 30px;display: block;text-align: center;">অর্ডার বন্ধ করুন</a>
 
 </main>
 
@@ -41,7 +42,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+body {
+    background-color: #ffffff !important;
+}
 .li {
     display: flex;
     justify-content: space-between;
