@@ -77,5 +77,16 @@ class User extends Authenticatable
         return $this->belongsTo(Plan::class, 'plan_id', 'id');
     }
 
+    public function deposits()
+    {
+        return $this->hasMany(Deposit::class,'user_id','id');
+    }
+
+    public function package_buys()
+    {
+        return $this->hasMany(PackageBuy::class,'userid','id');
+    }
+
+
 
 }

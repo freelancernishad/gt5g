@@ -45,7 +45,7 @@
                </div>
           </div>
 
-          <button class="buttonDetails border-0">More details</button>
+          <router-link :to="{name:'teamdaily',query:{level:'Level1'}}" class="buttonDetails border-0">More details</router-link>
 
         </div>
         <div class="bg-white mx-4 my-3 px-4 shadow-lg text-center topp">
@@ -61,7 +61,7 @@
                </div>
           </div>
 
-          <button class="buttonDetails border-0">More details</button>
+          <router-link :to="{name:'teamdaily',query:{level:'Level2'}}" class="buttonDetails border-0">More details</router-link>
 
         </div>
         <div class="bg-white mb-5 mx-4 my-3 pb-5 px-4 shadow-lg text-center topp">
@@ -77,7 +77,7 @@
                </div>
           </div>
 
-          <button class="buttonDetails border-0">More details</button>
+          <router-link :to="{name:'teamdaily',query:{level:'Level3'}}" class="buttonDetails border-0">More details</router-link>
 
         </div>
 
@@ -89,6 +89,8 @@
 
 
 <script>
+
+
 export default {
     data(){
         return {

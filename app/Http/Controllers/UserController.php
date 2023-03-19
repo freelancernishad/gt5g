@@ -88,7 +88,10 @@ public function referfunction($id)
     $refer['ToalEarnPur'] = $refer['L1']+$refer['L2']+$refer['L3'];
 
 
-        $level1 =  User::where($wh)->get();
+
+     $level1 = User::withSum(['deposits' => function ($query) {$query->FilterByStatus('approved');}], 'amount')->withSum(['package_buys' => function ($query) {$query->FilterByStatus('Active');}],'price')->where($wh)->get();
+
+        // $level1 =  User::where($wh)->get();
 
         // $level1 =  User::join('tasks', 'users.id', '=', 'tasks.user_id')
         // // ->join('tasks', 'users.id', '=', 'tasks.user_id')
@@ -106,7 +109,11 @@ public function referfunction($id)
             $wh2 = [
                 'ref_by'=>$value1->username,
             ];
-            $level2 =  User::where($wh2)->get();
+
+            // $level2 =  User::where($wh2)->get();
+
+            $level2 =  User::withSum(['deposits' => function ($query) {$query->FilterByStatus('approved');}], 'amount')->withSum(['package_buys' => function ($query) {$query->FilterByStatus('Active');}],'price')->where($wh2)->get();
+
             $level2count =  User::where($wh2)->count();
             if($level2count){
                 array_push($refer2,$level2);
@@ -125,7 +132,10 @@ public function referfunction($id)
             $wh3 = [
                 'ref_by'=>$value2->username,
             ];
-            $level3 =  User::where($wh3)->get();
+            // $level3 =  User::where($wh3)->get();
+
+            $level3 =  User::withSum(['deposits' => function ($query) {$query->FilterByStatus('approved');}], 'amount')->withSum(['package_buys' => function ($query) {$query->FilterByStatus('Active');}],'price')->where($wh3)->get();
+
             $level2count =  User::where($wh3)->count();
             if($level2count){
                 array_push($refer3,$level3);

@@ -32,4 +32,11 @@ class Deposit extends Model
     public function users(){
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+
+    public function scopeFilterByStatus($query, $status)
+    {
+        return $query->where('status', $status);
+    }
+
 }

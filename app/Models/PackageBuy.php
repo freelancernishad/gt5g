@@ -26,5 +26,10 @@ class PackageBuy extends Model
     }
 
 
+    public function scopeFilterByStatus($query, $status)
+    {
+        return $query;
+    }
+
 
 }

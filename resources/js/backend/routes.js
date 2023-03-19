@@ -90,6 +90,7 @@ let noreward = require('./components/users/gt5g/noreward.vue').default;
 let peraccpass = require('./components/users/gt5g/peraccpass.vue').default;
 let pullmoney = require('./components/users/gt5g/pullmoney.vue').default;
 let password = require('./components/users/gt5g/password.vue').default;
+let teamdaily = require('./components/users/gt5g/teamdaily.vue').default;
 
 
 
@@ -247,6 +248,7 @@ export const routes = [
   { path:  `${prefixuser}/peraccpass`, component: peraccpass, name:'peraccpass',meta: { layout: blanklayout } },
   { path:  `${prefixuser}/pullmoney`, component: pullmoney, name:'pullmoney',meta: { layout: blanklayout } },
   { path:  `${prefixuser}/password`, component: password, name:'password',meta: { layout: blanklayout } },
+  { path:  `${prefixuser}/teamdaily`, component: teamdaily, name:'teamdaily',meta: { layout: blanklayout } },
 
 
 
