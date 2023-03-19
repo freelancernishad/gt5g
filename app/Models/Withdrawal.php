@@ -16,6 +16,7 @@ class Withdrawal extends Model
         'rate',
         'charge',
         'trx',
+        'mer_trx',
         'final_amount',
         'after_charge',
         'recieved_number',

@@ -126,6 +126,10 @@ export default {
                 this.Messageactive = false
             }, 1000);
         },
+        randomLetter(length) {
+                let result = 'S'+this.dateformatglobal()[10]+this.dateformatglobal()[11]+this.dateformatglobal()[12]+Math.floor(Math.random() * (999999999999 - 11111111111));
+                return result;
+            },
 
         async WithdrawonSubmit() {
             this.isActive = true
@@ -144,6 +148,8 @@ export default {
                         this.form['charge'] = this.charge;
                         this.form['final_amount'] = this.balance;
                         this.form['after_charge'] = this.Payable;
+                        this.form['mer_trx'] =  this.randomLetter(20);
+
                         var res = await this.callApi('post', `/api/admin/withdrawal`, this.form);
                         if(res.data==422){
 

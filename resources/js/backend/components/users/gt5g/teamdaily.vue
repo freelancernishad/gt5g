@@ -25,7 +25,7 @@
 
         <div v-for="(level1,index) in teams" :key="index" style="display: flex; margin: 10px 15px; line-height: 40px; justify-content: space-around; background: rgb(255, 255, 255); border-top: 1px solid var(--defaltColor); box-shadow: rgb(204, 204, 204) 0px 1px 2px;">
             <div style="display: block;">
-                <div style="color: rgb(51, 51, 51); font-size: 14px; font-weight: bold;">{{ level1.mobile }}</div>
+                <div style="color: rgb(51, 51, 51); font-size: 14px; font-weight: bold;">{{ level1.mobile.substring(0, 4) }}****{{ level1.mobile.substring(8, 10) }}</div>
                 <div style="color: var(--defaltColor);">Team Size:0</div>
             </div>
             <div>

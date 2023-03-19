@@ -6,7 +6,7 @@
     </header>
 
     <div class="box"  v-for="rech in lists" :key="'rech'+rech.id">
-        <div class="top"></div>
+        <div class="top">Order number: {{ rech.mer_trx }}</div>
         <div class="num">
 
             <div class="left">

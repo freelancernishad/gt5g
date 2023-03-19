@@ -18,6 +18,7 @@ class Deposit extends Model
         'final_amount',
         'detials',
         'trx',
+        'mer_trx',
         'sender',
         'try',
         'status',

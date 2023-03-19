@@ -226,6 +226,7 @@ setInterval(function(){
         $method = $request->method;
         $methodData = Gateway::find($method);
         $data = $request->all();
+        $data['mer_trx'] =  $request->orderid;
         $date = date("Y-m-d");
 
         if($request->screenshot){

@@ -11,7 +11,7 @@
 
 
     <div class="box"  v-for="rech in lists" :key="'rech'+rech.id">
-        <div class="top">Order number: OP20230315102122170609040</div>
+        <div class="top">Order number: {{ rech.mer_trx }}</div>
         <div class="num">
 
             <div class="left">
