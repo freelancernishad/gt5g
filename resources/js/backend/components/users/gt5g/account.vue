@@ -35,11 +35,13 @@
 <div class="d-flex justify-content-around bg-white mx-4 my-3 shadow-lg py-4 ">
 
     <router-link :to="{name:'Recharge'}" class="recharge-flex defaltColor">
-        <img :src="$asseturl+'img/11111.png'" alt="">
+        <!-- <img :src="$asseturl+'img/11111.png'" alt=""> -->
+        <i class="fa-solid fa-bolt" style="    font-size: 25px;"></i>
         <p class="mb-0">Recharge</p>
     </router-link>
     <router-link :to="{name:'withdraw'}" class="recharge-flex defaltColor">
-        <img :src="$asseturl+'img/11111.png'" alt="">
+        <!-- <img :src="$asseturl+'img/11111.png'" alt=""> -->
+        <i class="fa-solid fa-arrow-up-from-bracket" style="    font-size: 25px;"></i>
         <p class="mb-0">Withdrawal</p>
     </router-link>
     <!-- <router-link :to="{name:'treasure'}" class="recharge-flex defaltColor">
@@ -50,42 +52,48 @@
 
 <div class="bg-white mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'banlance'}" class="mx-3 defaltColor">
-        <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
+        <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+        <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">Balance Record</p>
     </router-link>
 </div>
 
 <div class="bg-white mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'peraccpass'}"  class="mx-3 defaltColor">
-        <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
+                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+        <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">personal</p>
     </router-link>
 
 </div>
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'RechargeRecord'}"  class="mx-3 defaltColor">
-        <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
+                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+        <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">Recharge Record</p>
     </router-link>
 
 </div>
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'WithdrawalRecord'}"  class="mx-3 defaltColor">
-        <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
+                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+        <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">Withdrawal Record</p>
     </router-link>
 
 </div>
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'aboutus'}"  class="mx-3 defaltColor">
-        <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
+                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+        <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">About Us</p>
     </router-link>
 
 </div>
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <a :href="$asseturl+''"  class="mx-3 defaltColor">
-        <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
+                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+        <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">Download APP</p>
     </a>
 
@@ -95,7 +103,8 @@
 
 <div class="bg-white mx-4 my-3 py-4 shadow-lg mb-5">
     <router-link :to="{name:'logout'}"  class="mx-3 defaltColor">
-        <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
+                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+                <i class="fa-solid fa-right-from-bracket"></i>
         <p class="d-inline fw-bold mb-0 ms-1">Log Out</p>
     </router-link>
 

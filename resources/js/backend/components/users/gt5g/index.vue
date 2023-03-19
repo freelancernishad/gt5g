@@ -31,21 +31,26 @@
 
         <section class="d-flex gap-2 justify-content-between mb-2 mt-3">
 
-            <router-link :to="{name:'Recharge'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor">
-                <img :src="$asseturl+'img/5.1f17c1e9.png'" alt="" style="width: 36px; height: 36px;">
+            <router-link :to="{name:'Recharge'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor homeicons">
+
+                <i class="fa-solid fa-bolt"></i>
+                <!-- <img :src="$asseturl+'img/5.1f17c1e9.png'" alt="" style="width: 36px; height: 36px;"> -->
                 <p class="mb-0">Recharge</p>
             </router-link>
 
-            <router-link :to="{name:'withdraw'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor">
-                <img :src="$asseturl+'img/1.469498f5.png'" alt="" style="width: 36px; height: 36px;">
+            <router-link :to="{name:'withdraw'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor homeicons">
+                <!-- <img :src="$asseturl+'img/1.469498f5.png'" alt="" style="width: 36px; height: 36px;"> -->
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
                 <p class="mb-0">Withdraw</p>
             </router-link>
-            <router-link :to="{name:'noreward'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor">
-                <img :src="$asseturl+'img/3.d052248f.png'" alt="" style="width: 36px; height: 36px;">
+            <router-link :to="{name:'noreward'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor homeicons">
+                <!-- <img :src="$asseturl+'img/3.d052248f.png'" alt="" style="width: 36px; height: 36px;"> -->
+                <i class="fa-solid fa-question"></i>
                 <p class="mb-0">How do</p>
             </router-link>
-            <span @click="dailyCheckIn" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor">
-                <img :src="$asseturl+'img/5.1f17c1e9.png'" alt="" style="width: 36px; height: 36px;">
+            <span @click="dailyCheckIn" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor homeicons">
+                <!-- <img :src="$asseturl+'img/5.1f17c1e9.png'" alt="" style="width: 36px; height: 36px;"> -->
+                <i class="fa-solid fa-check-to-slot"></i>
                 <p class="mb-0">Check in</p>
             </span>
         </section>
@@ -165,5 +170,8 @@ export default {
 </script>
 
 <style>
+.homeicons i {
+    font-size: 35px;
+}
 
 </style>

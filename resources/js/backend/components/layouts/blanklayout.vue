@@ -7,24 +7,30 @@
         <footer class="fixed-footer mt-4 pt-5">
         <div class="text-center fixed-footer-bg border-top d-flex footer-row justify-content-around mt-3 pt-3 px-3"
             style="position: fixed; bottom: 0; width: 100%;background: white; margin-left: -15px;">
-            <router-link :to="{name:'Authuser'}">
-                <img class="footer-img" :src="$asseturl+'img/home.png'" alt="image1">
+            <router-link :to="{name:'Authuser'}" class="defaltColor navLink">
+                <i class="fa-brands fa-slack"></i>
+                <!-- <img class="footer-img" :src="$asseturl+'img/home.png'" alt="image1"> -->
                 <p>Home</p>
             </router-link>
-            <router-link :to="{name:'Earning'}">
-                <img class="footer-img" :src="$asseturl+'img/2ee.png'" alt="image1">
-                <p>Earnings</p>
-            </router-link>
-            <router-link :to="{name:'team'}">
-                <img class="footer-img" :src="$asseturl+'img/5t.png'" alt="image1">
+
+            <router-link :to="{name:'team'}" class="defaltColor navLink">
+                <!-- <img class="footer-img" :src="$asseturl+'img/5t.png'" alt="image1"> -->
+                <i class="fa-solid fa-people-arrows"></i>
                 <p>team</p>
             </router-link>
-            <router-link :to="{name:'share'}">
-                <img class="footer-img" :src="$asseturl+'img/1ss.png'" alt="image1">
+            <router-link :to="{name:'Earning'}" class="defaltColor navLink">
+                <!-- <img class="footer-img" :src="$asseturl+'img/2ee.png'" alt="image1"> -->
+                <i class="fa-brands fa-docker"></i>
+                <p>Earnings</p>
+            </router-link>
+            <router-link :to="{name:'share'}" class="defaltColor navLink">
+                <!-- <img class="footer-img" :src="$asseturl+'img/1ss.png'" alt="image1"> -->
+                <i class="fa-solid fa-share-nodes"></i>
                 <p>Share</p>
             </router-link>
-            <router-link :to="{name:'account'}">
-                <img class="footer-img" :src="$asseturl+'img/4mm.png'" alt="image1">
+            <router-link :to="{name:'account'}" class="defaltColor navLink">
+                <!-- <img class="footer-img" :src="$asseturl+'img/4mm.png'" alt="image1"> -->
+                <i class="fa-solid fa-user-doctor"></i>
                 <p>account</p>
             </router-link>
 
@@ -284,4 +290,10 @@ section.intro.profileBg.mb-5,.layout-content {
 section.intro.profileBg.mb-5 {
     padding: 35px 0px;
 }
+
+
+.navLink i{
+    font-size: 30px;
+}
+
 </style>
