@@ -14,8 +14,8 @@ $Users = $mysqli -> query($sqlUsers);
 
 
     while ($Usersvalue = $Users -> fetch_object()) {
-         $id = $value->id;
-            $sql4user = "UPDATE users SET `checkin`='1' WHERE id='$id'";
+         $id = $Usersvalue->id;
+            $sql4user = "UPDATE `users` SET `checkin`=1 WHERE id='$id'";
             $mysqli->query($sql4user);
         }
 
