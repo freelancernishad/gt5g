@@ -56,7 +56,7 @@
 </div>
 
 <div class="bg-white mx-4 my-3 py-4 shadow-lg">
-    <router-link :to="{name:'banlance'}"  class="mx-3">
+    <router-link :to="{name:'peraccpass'}"  class="mx-3">
         <img :src="$asseturl+'img/book.126a5a8e.png'" alt="">
         <p class="d-inline fw-bold mb-0 ms-1">personal</p>
     </router-link>

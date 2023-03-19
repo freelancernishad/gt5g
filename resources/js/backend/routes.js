@@ -87,6 +87,8 @@ let withdraw = require('./components/users/gt5g/withdraw.vue').default;
 let WithdrawalRecord = require('./components/users/gt5g/WithdrawalRecord.vue').default;
 let aboutus = require('./components/users/gt5g/aboutus.vue').default;
 let noreward = require('./components/users/gt5g/noreward.vue').default;
+let peraccpass = require('./components/users/gt5g/peraccpass.vue').default;
+let pullmoney = require('./components/users/gt5g/pullmoney.vue').default;
 
 
 
@@ -241,6 +243,8 @@ export const routes = [
   { path:  `${prefixuser}/withdrawal/record`, component: WithdrawalRecord, name:'WithdrawalRecord',meta: { layout: blanklayout } },
   { path:  `${prefixuser}/aboutus`, component: aboutus, name:'aboutus',meta: { layout: blanklayout } },
   { path:  `${prefixuser}/noreward`, component: noreward, name:'noreward',meta: { layout: blanklayout } },
+  { path:  `${prefixuser}/peraccpass`, component: peraccpass, name:'peraccpass',meta: { layout: blanklayout } },
+  { path:  `${prefixuser}/pullmoney`, component: pullmoney, name:'pullmoney',meta: { layout: blanklayout } },
 
 
 

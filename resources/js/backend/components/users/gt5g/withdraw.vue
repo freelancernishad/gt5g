@@ -154,7 +154,7 @@ export default {
                             this.notifiy('Falied! withdraw cant be proccess.');
                         }else{
                             this.notifiy(`Withdraw Successfuly Complete`);
-                            this.$router.push({ name: 'RechargeRecord' });
+                            this.$router.push({ name: 'WithdrawalRecord' });
                         }
 
                     }
