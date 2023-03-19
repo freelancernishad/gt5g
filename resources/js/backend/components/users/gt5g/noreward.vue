@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="header-text mb-5" style="background-color: #0036ca;margin-bottom: -16px;">
+        <header class="header-text mb-5 defaltColorBg" style="margin-bottom: -16px;">
         <p class="py-2 text-white"> Mobil Incentive Rules </p>
     </header>
     <main class="mb-5 pb-5">

@@ -61,6 +61,7 @@ export default {
 
 
             payMethods: '',
+
             amount: 0,
             step: 1,
             copyMessage:'',

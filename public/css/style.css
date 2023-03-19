@@ -76,7 +76,7 @@ section div p {
     margin-bottom: 10px;
 }
 .topp{
-    border-top: 4px solid #0036ca;
+    border-top: 4px solid var(--defaltColor);
     border-bottom: 1px solid #eee;
 }
 .buttonDetails{
@@ -97,7 +97,7 @@ img.icon {
 
     justify-content: space-around;
     display: flex;
-    border: 1px solid #0036ca;
+    border: 1px solid var(--defaltColor);
     font-weight: 700;
     gap: 5px;
     padding: 3px;

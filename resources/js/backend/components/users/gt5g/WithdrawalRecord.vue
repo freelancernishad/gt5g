@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <header class="header-text mb-5" style="background-color: #0036ca;margin-bottom: -16px;">
+        <header class="header-text mb-5" style="background-color: var(--defaltColor);margin-bottom: -16px;">
         <p class="py-2 text-white">  Withdrawal Record   </p>
     </header>
 

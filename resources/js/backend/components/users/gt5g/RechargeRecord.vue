@@ -1,7 +1,7 @@
 <template>
     <div>
 
-    <header class="header-text mb-5" style="background-color: #0036ca;margin-bottom: -16px;">
+    <header class="header-text mb-5" style="background-color: var(--defaltColor);margin-bottom: -16px;">
         <p class="py-2 text-white">Recharge Record </p>
     </header>
 <main>
@@ -102,7 +102,7 @@ export default {
     color: #333;
     height: 50px;
     line-height: 50px;
-    border-top: 4px solid #0036ca;
+    border-top: 4px solid var(--defaltColor);
     border-bottom: 1px dashed #ddd;
 }
 .box .num {

@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <header class="header-text" style="background-color: #0036ca;margin-bottom: -16px;">
+        <header class="header-text" style="background-color: var(--defaltColor);margin-bottom: -16px;">
         <p class="py-2 text-white"> Share </p>
     </header>
 
@@ -12,7 +12,7 @@
 
             <p class="mb-0 pt-2">My Invitation Code<p>
                 <p class="fs-5 fw-bold mb-2">{{ row.user.username }}</p>
-             <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white w-100"  @click="copyref" style="background-color: #0036ca;">Copy Link</button>
+             <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white w-100"  @click="copyref" style="background-color: var(--defaltColor);">Copy Link</button>
           </div>
           <div style="background-color: #f1f1f1;" class="mb-3 py-3">
             <p>My QR code</p>
@@ -29,7 +29,7 @@
                     <p class="fw-bold m-0 py-2 text-primary">Mission Rewards5.00</p>
                 </div>
                 <div class="w-25 text-end">
-                    <button class="btn fw-bold  rounded-0 text-white " style="background-color: #0036ca;"> <span v-if="row.user.refercount>20">Finished</span> <span v-else>Unfinished</span></button>
+                    <button class="btn fw-bold  rounded-0 text-white " style="background-color: var(--defaltColor);"> <span v-if="row.user.refercount>20">Finished</span> <span v-else>Unfinished</span></button>
                     <p class="m-0 me-3 text-primary py-2">{{ row.refercount }} / 20</p>
                 </div>
             </div>

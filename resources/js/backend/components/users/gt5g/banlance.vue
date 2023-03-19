@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="header-text" style="background-color: #0036ca;margin-bottom: -16px;">
+        <header class="header-text defaltColorBg" style="margin-bottom: -16px;">
         <p class="py-2 text-white"> Balance Record </p>
     </header>
 
@@ -87,6 +87,6 @@ export default {
 }
 
 .tabClass p.Bactive {
-    border-bottom: 4px solid rgb(0, 54, 202);
+    border-bottom: 4px solid var(--defaltColor);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div>
 
-    <header class="header-text" style="background-color: #0036ca;margin-bottom: -16px;">
+    <header class="header-text" style="background-color: var(--defaltColor);margin-bottom: -16px;">
         <p class="py-2 text-white">Withdrawal Account </p>
     </header>
 
@@ -33,7 +33,7 @@
               </div>
         </div>
         <div class="w-100 text-center px-4" v-if="!disabaled" >
-            <button class="btn fw-bold rounded-0 text-white w-100" style="background-color: #0036ca;">save</button>
+            <button class="btn fw-bold rounded-0 text-white w-100" style="background-color: var(--defaltColor);">save</button>
         </div>
    </form>
 

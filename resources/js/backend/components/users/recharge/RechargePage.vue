@@ -264,8 +264,6 @@ export default {
             }, 1000);
 
 
-
-
         },
 
 
@@ -279,7 +277,12 @@ export default {
                 localStorage.setItem('rechargeData', JSON.stringify(this.form))
                 this.menual = true
                 this.countdown(this.menual);
+
+                var regTimer = new Date(new Date().getTime() + 900000);
+                localStorage.setItem('regTimer',regTimer);
+
                 this.$router.push({ name: 'rechargecheckout' });
+
                 this.accounterror = '';
             } else {
                 this.accounterror = 'আপনার একাউন্ট অবৈধ';

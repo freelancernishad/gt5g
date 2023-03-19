@@ -10,7 +10,26 @@
     {{-- <link rel="stylesheet" href="{{ asset('dashboard_asset/css/all.min.css') }}"> --}}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            --van-cell-group-background-color:white;
+             --van-button-default-background-color:white;
+             --defaltColor:#d14d0e;
+        }
 
+
+        .defaltColor{
+            color: var(--defaltColor) !important;
+        }
+
+        .defaltColorBg {
+                background: var(--defaltColor) !important;
+            }
+
+.video-cntainer {
+
+}
+    </style>
     {{-- <!-- Favicon -->
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="{{ asset('dashboard_asset/css/normalize.css') }}">
@@ -32,16 +51,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <style>
-        *{
-            --van-cell-group-background-color:white;
-             --van-button-default-background-color:white;
-        }
 
-.video-cntainer {
-
-}
-    </style>
 <style>
 
 

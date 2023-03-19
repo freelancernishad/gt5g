@@ -1,15 +1,15 @@
 <template>
     <div>
-        <header class="header-text" style="background-color: #0036ca; margin-bottom: -16px">
+        <header class="header-text defaltColorBg" style="margin-bottom: -16px">
             <p class="py-2 text-white">Earnings</p>
         </header>
 
         <main class="main-bg-absulate">
             <div class="bg-white mx-4 shadow-lg text-center">
                 <p class="fs-6 mb-0 py-2">Receiveable Income</p>
-                <p class="fw-bold text-primary">৳{{ earndata.user.receiveable }}</p>
-                <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white w-75" @click="orderSubmit"
-                    style="background-color: #0036ca">
+                <p class="fw-bold defaltColor">৳{{ earndata.user.receiveable }}</p>
+                <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white w-75 defaltColorBg" @click="orderSubmit"
+                   >
                     Receive
                 </button>
             </div>
