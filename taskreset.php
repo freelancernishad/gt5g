@@ -58,6 +58,28 @@ $package_buys = $mysqli -> query($sql);
 
 
 
+$sqlUsers = "SELECT * FROM `users`";
+$Users = $mysqli -> query($sqlUsers);
+
+
+    while ($Usersvalue = $Users -> fetch_object()) {
+
+
+         $id = $value->id;
+
+
+
+
+
+            $sql4user = "UPDATE users SET `checkin`=1 WHERE id='$id'";
+            $mysqli->query($sql4user);
+
+
+
+}
+
+
+
 
 
 
