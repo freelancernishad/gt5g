@@ -63,7 +63,7 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.0.12') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.13') }}"></script>
 
 
 

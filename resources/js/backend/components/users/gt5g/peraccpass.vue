@@ -5,10 +5,10 @@
                 <div data-v-12a91c7f="" class="le">Account</div>
                 <div data-v-12a91c7f="" class="big">&gt;</div>
             </router-link>
-            <div data-v-12a91c7f="" class="boxOwn">
+            <router-link :to="{name:'password'}" data-v-12a91c7f="" class="boxOwn">
                 <div data-v-12a91c7f="" class="le">Password</div>
                 <div data-v-12a91c7f="" class="big">&gt;</div>
-            </div>
+            </router-link>
         </div>
 
 
