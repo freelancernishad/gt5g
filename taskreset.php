@@ -9,6 +9,18 @@ if ($mysqli -> connect_errno) {
 }
 
 
+$sqlUsers = "SELECT * FROM `users`";
+$Users = $mysqli -> query($sqlUsers);
+
+
+    while ($Usersvalue = $Users -> fetch_object()) {
+         $id = $value->id;
+            $sql4user = "UPDATE users SET `checkin`='1' WHERE id='$id'";
+            $mysqli->query($sql4user);
+        }
+
+
+
 
 $sqlFirst = "SELECT * FROM `package_buys`  WHERE `status`='Active'";
 $package_buysFirst = $mysqli -> query($sqlFirst);
@@ -63,26 +75,6 @@ $package_buys = $mysqli -> query($sql);
 }
 
 
-
-$sqlUsers = "SELECT * FROM `users`";
-$Users = $mysqli -> query($sqlUsers);
-
-
-    while ($Usersvalue = $Users -> fetch_object()) {
-
-
-         $id = $value->id;
-
-
-
-
-
-            $sql4user = "UPDATE users SET `checkin`='1' WHERE id='$id'";
-            $mysqli->query($sql4user);
-
-
-
-}
 
 
 
