@@ -1,5 +1,6 @@
 <?php
-$mysqli = new mysqli("localhost","root","","midvelleyy_next");
+$mysqli = new mysqli("localhost","ronytraders_gt5g","ronytraders_gt5g","ronytraders_gt5g");
+
 
 // Check connection
 if ($mysqli -> connect_errno) {
@@ -48,7 +49,7 @@ $package_buys = $mysqli -> query($sql);
             $nowReceiveAble = $receiveable+$earn;
 
 
-            $sql4Up = "UPDATE users SET `receiveable`='$nowReceiveAble' WHERE id='$userid'";
+            $sql4Up = "UPDATE users SET `receiveable`='$nowReceiveAble' && `checkin`=1 WHERE id='$userid'";
             $mysqli->query($sql4Up);
 
 
