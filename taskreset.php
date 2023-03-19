@@ -45,11 +45,17 @@ $package_buys = $mysqli -> query($sql);
             $user = $sql3Query -> fetch_assoc();
 
             $earn = $value->earn;
+
             $receiveable = $user['receiveable'];
+
+            if(!$receiveable){
+                $receiveable = 0;
+            }
+
             $nowReceiveAble = $receiveable+$earn;
 
 
-            $sql4Up = "UPDATE users SET `receiveable`='$nowReceiveAble' && `checkin`=1 WHERE id='$userid'";
+            $sql4Up = "UPDATE users SET `receiveable`='$nowReceiveAble' WHERE id='$userid'";
             $mysqli->query($sql4Up);
 
 
@@ -71,7 +77,7 @@ $Users = $mysqli -> query($sqlUsers);
 
 
 
-            $sql4user = "UPDATE users SET `checkin`=1 WHERE id='$id'";
+            $sql4user = "UPDATE users SET `checkin`='1' WHERE id='$id'";
             $mysqli->query($sql4user);
 
 
