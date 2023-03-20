@@ -69,9 +69,6 @@
     </main>
 
 
-
-
-    <Popups :PackPurchase="PackPurchase" :Title="PopupTitle" @event-close="ClosePopup" @event-submit="purchaseComplete"/>
     <Preload :Isactive="isActive"/>
     <Message :Isactive="Messageactive" :Message="Message"/>
 

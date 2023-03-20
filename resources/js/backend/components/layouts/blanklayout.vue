@@ -6,7 +6,7 @@
 
         <footer class="fixed-footer mt-4 pt-5">
         <div class="text-center fixed-footer-bg border-top d-flex footer-row justify-content-around mt-3 pt-3 px-3"
-            style="position: fixed; bottom: 0; width: 100%;background: white; margin-left: -15px;">
+            style="position: fixed; bottom: 0; width: 100%;background: white; margin-left: 0;">
             <router-link :to="{name:'Authuser'}" class="defaltColor navLink">
                 <i class="fa-brands fa-slack"></i>
                 <!-- <img class="footer-img" :src="$asseturl+'img/home.png'" alt="image1"> -->
