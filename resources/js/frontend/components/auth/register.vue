@@ -5,7 +5,11 @@
 
 <form @submit.prevent="register" class="bg-white mx-4 shadow-lg ">
     <div class="py-3 text-center">
-        <img :src="$asseturl+'img/logo.86599c07.png'" alt="" class="img-fluid w-50">
+        <!-- <img :src="$asseturl+'img/logo.86599c07.png'" alt="" class="img-fluid w-50"> -->
+        <h2 style="font-size: 60px;
+    font-weight: bolder;
+    font-family: math;
+    color: var(--defaltColor);">SUN ENERGY</h2>
         <p class="fw-bold mb-0 py-2">Welcome to Register</p>
     </div>
 

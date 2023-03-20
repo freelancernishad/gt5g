@@ -3043,17 +3043,7 @@ var render = function render() {
         return _vm.login.apply(null, arguments);
       }
     }
-  }, [_c("div", {
-    staticClass: "py-3 text-center"
-  }, [_c("img", {
-    staticClass: "img-fluid w-50",
-    attrs: {
-      src: _vm.$asseturl + "img/logo.86599c07.png",
-      alt: ""
-    }
-  }), _vm._v(" "), _c("p", {
-    staticClass: "fw-bold mb-0 py-2"
-  }, [_vm._v("Welcome to login")])]), _vm._v(" "), _c("div", [_c("div", {
+  }, [_vm._m(0), _vm._v(" "), _c("div", [_c("div", {
     staticClass: "flex-nowrap input-group px-3 mb-3"
   }, [_c("span", {
     staticClass: "input-group-text rounded-0 borderleft",
@@ -3125,7 +3115,7 @@ var render = function render() {
         _vm.$set(_vm.form, "password", $event.target.value);
       }
     }
-  })])]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+  })])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
     staticClass: "mt-4 text-center w-100"
   }, [_c("button", {
     staticClass: "btn fw-bold mb-4 mt-2 rounded-0 text-white",
@@ -3162,6 +3152,22 @@ var render = function render() {
 };
 
 var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "py-3 text-center"
+  }, [_c("h2", {
+    staticStyle: {
+      "font-size": "60px",
+      "font-weight": "bolder",
+      "font-family": "math",
+      color: "var(--defaltColor)"
+    }
+  }, [_vm._v("SUN ENERGY")]), _vm._v(" "), _c("p", {
+    staticClass: "fw-bold mb-0 py-2"
+  }, [_vm._v("Welcome to login")])]);
+}, function () {
   var _vm = this,
       _c = _vm._self._c;
 
@@ -3208,17 +3214,7 @@ var render = function render() {
         return _vm.register.apply(null, arguments);
       }
     }
-  }, [_c("div", {
-    staticClass: "py-3 text-center"
-  }, [_c("img", {
-    staticClass: "img-fluid w-50",
-    attrs: {
-      src: _vm.$asseturl + "img/logo.86599c07.png",
-      alt: ""
-    }
-  }), _vm._v(" "), _c("p", {
-    staticClass: "fw-bold mb-0 py-2"
-  }, [_vm._v("Welcome to Register")])]), _vm._v(" "), _c("div", [_c("div", {
+  }, [_vm._m(0), _vm._v(" "), _c("div", [_c("div", {
     staticClass: "flex-nowrap input-group px-3 mb-3"
   }, [_c("span", {
     staticClass: "input-group-text rounded-0 borderleft",
@@ -3465,7 +3461,23 @@ var render = function render() {
   })], 1);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "py-3 text-center"
+  }, [_c("h2", {
+    staticStyle: {
+      "font-size": "60px",
+      "font-weight": "bolder",
+      "font-family": "math",
+      color: "var(--defaltColor)"
+    }
+  }, [_vm._v("SUN ENERGY")]), _vm._v(" "), _c("p", {
+    staticClass: "fw-bold mb-0 py-2"
+  }, [_vm._v("Welcome to Register")])]);
+}];
 render._withStripped = true;
 
 

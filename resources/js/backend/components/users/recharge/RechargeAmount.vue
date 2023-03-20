@@ -2,7 +2,7 @@
     <div>
 
 
-        <header class="header-text" style="background-color: #0036ca;margin-bottom: -16px;">
+        <header class="header-text" style="background-color: var(--defaltColor);margin-bottom: -16px;">
         <p class="py-2 text-white">Recharge </p>
     </header>
     <form @submit.stop.prevent="onSubmit">
@@ -12,25 +12,23 @@
             <p class="fs-1 fw-bold py-1 text-center">৳{{ parseFloat(row.user.balance).toFixed(2) }}</p>
         </div>
         <div class="bg-white lh-1 mt-3 w-100 shadow">
-          <input type="text" v-model="form.amount" class="border-primary py-3 w-100">
+          <input type="text" v-model="form.amount" class="border-danger py-3 w-100">
         </div>
 
 
     </main>
 <section class="fw-bold mt-3 mx-3">
     <div class="grid-container">
-        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 1100 }" @click="form.amount = 1100">৳1100</p>
-        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 1200 }" @click="form.amount = 1200">৳1200</p>
-        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 2600 }" @click="form.amount = 2600">৳2600</p>
+        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 1000 }" @click="form.amount = 1000">৳1000</p>
+        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 2500 }" @click="form.amount = 2500">৳2500</p>
         <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 6000 }" @click="form.amount = 6000">৳6000</p>
-        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 9000 }" @click="form.amount = 9000">৳9000</p>
-        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 12000 }" @click="form.amount = 12000">৳12000</p>
-        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 24000 }" @click="form.amount = 24000">৳24000</p>
+        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 10000 }" @click="form.amount = 10000">৳10000</p>
+        <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 16000 }" @click="form.amount = 16000">৳16000</p>
         <p class="bg-white py-3 shadow text-center w-100" :class="{ 'active':form.amount == 25000 }" @click="form.amount = 25000">৳25000</p>
 
 
       </div>
-      <div class="bg-white border border-2 border-primary  mt-3 py-3 shadow w-100">
+      <div class="bg-white border border-2 border-danger  mt-3 py-3 shadow w-100">
 
         <div class="d-flex gap-2 ms-2 w-50">
             <p>Pay Type</p> <img src="https://static.vecteezy.com/system/resources/previews/010/141/449/original/check-mark-icon-sign-symbol-design-free-png.png" alt="" style="width: 25px;"> <p>onepay</p>
@@ -124,11 +122,11 @@ export default {
 }
 .active {
     color: #fff;
-    background: #0036ca !important;
+    background: var(--defaltColor) !important;
 }
 button.btn.btn-primary {
-    background: #0036ca !important;
-    border: #0036ca !important;
+    background: var(--defaltColor) !important;
+    border: var(--defaltColor) !important;
     height: 38px;
     width:100%;
 }
