@@ -40,6 +40,14 @@ export default {
 </script>
 <style>
 
+.borderleft{
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+}
+.borderright{
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
 
 .surePopup {
     position: fixed;

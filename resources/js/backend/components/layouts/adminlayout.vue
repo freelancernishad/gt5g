@@ -242,7 +242,7 @@ export default {
         this.createlink('dashboard_asset/css/bootstrap.min.css');
         this.createlink('dashboard_asset/css/all.min.css');
         this.createlink('dashboard_asset/fonts/flaticon.css');
-        this.createlink('dashboard_asset/style.css?ver=1.0.0');
+        this.createlink('dashboard_asset/style.css?ver=1.0.1');
 
         this.createscript('dashboard_asset/js/popper.min.js');
         this.createscript('dashboard_asset/js/bootstrap.min.js');

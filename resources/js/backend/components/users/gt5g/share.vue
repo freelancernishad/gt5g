@@ -26,11 +26,11 @@
             <div class="d-flex">
                 <div class="w-75">
                     <p class="fw-bold m-0 py-2">Invitation to sign up bonus</p>
-                    <p class="fw-bold m-0 py-2 text-primary">Mission Rewards5.00</p>
+                    <p class="fw-bold m-0 py-2 defaltColor">Mission Rewards5.00</p>
                 </div>
                 <div class="w-25 text-end">
                     <button class="btn fw-bold  rounded-0 text-white " style="background-color: var(--defaltColor);"> <span v-if="row.user.refercount>20">Finished</span> <span v-else>Unfinished</span></button>
-                    <p class="m-0 me-3 text-primary py-2">{{ row.refercount }} / 20</p>
+                    <p class="m-0 me-3 defaltColor py-2">{{ row.refercount }} / 20</p>
                 </div>
             </div>
         </div>

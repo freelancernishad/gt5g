@@ -5,26 +5,17 @@
         <p class="py-2 text-white"> about us </p>
     </header>
     <main class="mb-5 pb-5 px-4">
-        <p>GT-5G is a company building 5G base stations under the [Qualcomm] roof. The basic technologies we invent, and
-            share the inventions with the entire mobile industry through the technology licensing model, and become a
-            strong backing for customers and partners to innovate, compete and develop globally. Beginning in 1995, this
-            model is the foundation of Qualcomm's core mission, values ​​and culture, driving the vigorous development
-            of the market and continuing to benefit consumers.</p>
-        <p>GT-5G is a company building 5G base stations under the [Qualcomm] roof. The basic technologies we invent, and
-            share the inventions with the entire mobile industry through the technology licensing model, and become a
-            strong backing for customers and partners to innovate, compete and develop globally. Beginning in 1995, this
-            model is the foundation of Qualcomm's core mission, values ​​and culture, driving the vigorous development
-            of the market and continuing to benefit consumers.</p>
-        <p>GT-5G is a company building 5G base stations under the [Qualcomm] roof. The basic technologies we invent, and
-            share the inventions with the entire mobile industry through the technology licensing model, and become a
-            strong backing for customers and partners to innovate, compete and develop globally. Beginning in 1995, this
-            model is the foundation of Qualcomm's core mission, values ​​and culture, driving the vigorous development
-            of the market and continuing to benefit consumers.</p>
-        <p>GT-5G is a company building 5G base stations under the [Qualcomm] roof. The basic technologies we invent, and
-            share the inventions with the entire mobile industry through the technology licensing model, and become a
-            strong backing for customers and partners to innovate, compete and develop globally. Beginning in 1995, this
-            model is the foundation of Qualcomm's core mission, values ​​and culture, driving the vigorous development
-            of the market and continuing to benefit consumers.</p>
+        <p>Sun-EnergY is a company that manufactures 10 rooftop Sun-Energy bases.The fundamental technology we innovate, and share the innovations with the entire industry through the technology licensing model, and become a strong support for customers and partners for global innovation, competition and development. Started in 1983, this model is the foundation of Qualcomm's core mission, values ​​and culture, which continues to drive strong market growth and benefit consumers at Sun-Energy.
+</p>
+        <p>Sun-EnergY is a company that manufactures 10 rooftop Sun-EnergY base stations. The basic technology we innovate, and share the innovations with the entire solar industry through technology licensing model, and become a strong support for customers and partners for global innovation, competition and development.
+</p>
+        <p>Started in 1983, this model is the foundation of Qualcomm's core mission, values ​​and culture, which continues to drive strong market growth and benefit consumers at Sun-Energy.
+</p>
+        <p>Sun-EnergY is a company that manufactures rooftop Sun-EnergY bases. The fundamental technology we innovate, and share the innovations with the entire industry through the technology licensing model, and become a strong support for customers and partners for global innovation, competition and development.
+</p>
+
+        <p>Started in 1983, this model is the foundation of Qualcomm's core mission, values ​​and culture, which continues to drive strong market growth and benefit consumers at Sun-Energy
+        </p>
 
 
     </main>

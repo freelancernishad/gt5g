@@ -57,7 +57,8 @@ Vue.use(VueYoutube)
 // require( 'datatables.net-searchpanes-dt' );
 // require( 'datatables.net-select-dt' );
 // require( 'datatables.net-staterestore-dt' );
-
+import Multiselect from 'vue-multiselect'
+Vue.component('multiselect', Multiselect)
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 

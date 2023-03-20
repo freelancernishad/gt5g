@@ -91,6 +91,7 @@ let peraccpass = require('./components/users/gt5g/peraccpass.vue').default;
 let pullmoney = require('./components/users/gt5g/pullmoney.vue').default;
 let password = require('./components/users/gt5g/password.vue').default;
 let teamdaily = require('./components/users/gt5g/teamdaily.vue').default;
+let packagesView = require('./components/users/gt5g/packages.vue').default;
 
 
 
@@ -110,7 +111,7 @@ let teamIntro = require('./components/users/teamIntro.vue').default;
 
 
 
-let Packages = require('./components/users/plans/Package.vue').default;
+// let Packages = require('./components/users/plans/Package.vue').default;
 let earning = require('./components/users/plans/earning.vue').default;
 
 
@@ -249,6 +250,7 @@ export const routes = [
   { path:  `${prefixuser}/pullmoney`, component: pullmoney, name:'pullmoney',meta: { layout: blanklayout } },
   { path:  `${prefixuser}/password`, component: password, name:'password',meta: { layout: blanklayout } },
   { path:  `${prefixuser}/teamdaily`, component: teamdaily, name:'teamdaily',meta: { layout: blanklayout } },
+  { path:  `${prefixuser}/packages`, component: packagesView, name:'package',meta: { layout: blanklayout } },
 
 
 
@@ -274,7 +276,7 @@ export const routes = [
 
 
 
-  { path:  `${prefixuser}/Packages`, component: Packages, name:'Packages',meta: { layout: blanklayout } },
+//   { path:  `${prefixuser}/Packages`, component: Packages, name:'Packages',meta: { layout: blanklayout } },
   { path:  `${prefixuser}/earning`, component: earning, name:'earning',meta: { layout: blanklayout } },
 
 

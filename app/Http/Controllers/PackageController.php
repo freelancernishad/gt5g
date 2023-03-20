@@ -149,7 +149,9 @@ class PackageController extends Controller
         $balance = intval($user->balance)-intval($request->packagePrice);
         transitionCreate($user->id,$request->packagePrice,0,$balance,'decrease','','package','purchase');
 
-        $user->update(['balance'=>$balance]);
+        $Oldreceiveable = $user->receiveable;
+$receiveable = $Oldreceiveable+$request->packageEarn;
+        $user->update(['balance'=>$balance,'receiveable'=>$receiveable]);
         return 1;
 
 

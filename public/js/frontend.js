@@ -2325,7 +2325,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   created: function created() {
-    this.genaratedCaptcha = Math.floor(Math.random() * (999999 - 111111) + 111111); // if (User.loggedIn()) {
+    this.genaratedCaptcha = Math.floor(Math.random() * (9999 - 1111) + 1111); // if (User.loggedIn()) {
     //     this.$router.push({ name: 'home' })
     // }
     // localStorage.setItem('dmdevice',1)
@@ -3056,7 +3056,7 @@ var render = function render() {
   }, [_vm._v("Welcome to login")])]), _vm._v(" "), _c("div", [_c("div", {
     staticClass: "flex-nowrap input-group px-3 mb-3"
   }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
+    staticClass: "input-group-text rounded-0 borderleft",
     attrs: {
       id: "addon-wrapping"
     }
@@ -3072,7 +3072,7 @@ var render = function render() {
       value: _vm.form.mobile,
       expression: "form.mobile"
     }],
-    staticClass: "form-control rounded-0",
+    staticClass: "form-control rounded-0 borderright",
     attrs: {
       type: "tel",
       placeholder: "+880",
@@ -3092,7 +3092,7 @@ var render = function render() {
   })]), _vm._v(" "), _c("div", {
     staticClass: "flex-nowrap input-group px-3"
   }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
+    staticClass: "input-group-text rounded-0 borderleft",
     attrs: {
       id: "addon-wrapping"
     }
@@ -3108,7 +3108,7 @@ var render = function render() {
       value: _vm.form.password,
       expression: "form.password"
     }],
-    staticClass: "form-control rounded-0",
+    staticClass: "form-control rounded-0 borderright",
     attrs: {
       type: "password",
       placeholder: "password",
@@ -3130,7 +3130,7 @@ var render = function render() {
   }, [_c("button", {
     staticClass: "btn fw-bold mb-4 mt-2 rounded-0 text-white",
     staticStyle: {
-      "background-color": "#0036ca",
+      "background-color": "var(--defaltColor)",
       width: "93%"
     },
     attrs: {
@@ -3141,7 +3141,7 @@ var render = function render() {
     staticStyle: {
       background: "#f1f1f1",
       color: "#333",
-      border: "2px solid #0036ca",
+      border: "2px solid var(--defaltColor)",
       width: "93%"
     },
     attrs: {
@@ -3221,7 +3221,7 @@ var render = function render() {
   }, [_vm._v("Welcome to Register")])]), _vm._v(" "), _c("div", [_c("div", {
     staticClass: "flex-nowrap input-group px-3 mb-3"
   }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
+    staticClass: "input-group-text rounded-0 borderleft",
     attrs: {
       id: "addon-wrapping"
     }
@@ -3237,7 +3237,7 @@ var render = function render() {
       value: _vm.form.mobile,
       expression: "form.mobile"
     }],
-    staticClass: "form-control rounded-0",
+    staticClass: "form-control rounded-0 borderright",
     attrs: {
       type: "tel",
       placeholder: "+880",
@@ -3260,7 +3260,7 @@ var render = function render() {
   })]), _vm._v(" "), _c("div", {
     staticClass: "flex-nowrap input-group px-3"
   }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
+    staticClass: "input-group-text rounded-0 borderleft",
     attrs: {
       id: "addon-wrapping"
     }
@@ -3276,7 +3276,7 @@ var render = function render() {
       value: _vm.form.password,
       expression: "form.password"
     }],
-    staticClass: "form-control rounded-0",
+    staticClass: "form-control rounded-0 borderright",
     attrs: {
       type: "password",
       placeholder: "password",
@@ -3296,7 +3296,7 @@ var render = function render() {
   })]), _vm._v(" "), _c("div", {
     staticClass: "flex-nowrap input-group px-3 py-3"
   }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
+    staticClass: "input-group-text rounded-0 borderleft",
     attrs: {
       id: "addon-wrapping"
     }
@@ -3312,7 +3312,7 @@ var render = function render() {
       value: _vm.form.ref_by,
       expression: "form.ref_by"
     }],
-    staticClass: "form-control rounded-0",
+    staticClass: "form-control rounded-0 borderright",
     attrs: {
       type: "text",
       placeholder: "Invite Code",
@@ -3334,7 +3334,7 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "flex-nowrap input-group px-3"
   }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
+    staticClass: "input-group-text rounded-0 borderleft",
     attrs: {
       id: "addon-wrapping"
     }
@@ -3350,7 +3350,7 @@ var render = function render() {
       value: _vm.otp,
       expression: "otp"
     }],
-    staticClass: "form-control rounded-0",
+    staticClass: "form-control rounded-0 borderright",
     attrs: {
       type: "text",
       placeholder: "SMS Code",
@@ -3374,7 +3374,7 @@ var render = function render() {
     staticStyle: {
       background: "#f1f1f1",
       color: "#333",
-      border: "2px solid #0036ca",
+      border: "2px solid var(--defaltColor)",
       width: "93%"
     },
     attrs: {
@@ -3388,7 +3388,7 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "flex-nowrap input-group px-3"
   }, [_c("span", {
-    staticClass: "input-group-text rounded-0",
+    staticClass: "input-group-text rounded-0 borderleft",
     attrs: {
       id: "addon-wrapping"
     }
@@ -3404,7 +3404,7 @@ var render = function render() {
       value: _vm.captcha,
       expression: "captcha"
     }],
-    staticClass: "form-control rounded-0",
+    staticClass: "form-control rounded-0 borderright",
     attrs: {
       type: "text",
       placeholder: " Code",
@@ -3426,7 +3426,7 @@ var render = function render() {
     staticStyle: {
       background: "#f1f1f1",
       color: "#333",
-      border: "2px solid #0036ca",
+      border: "2px solid var(--defaltColor)",
       width: "93%"
     },
     attrs: {
@@ -3437,7 +3437,7 @@ var render = function render() {
   }, [_c("button", {
     staticClass: "btn fw-bold mb-4 mt-2 rounded-0 text-white",
     staticStyle: {
-      "background-color": "#0036ca",
+      "background-color": "var(--defaltColor)",
       width: "93%"
     }
   }, [_vm._v("Register")]), _vm._v(" "), _c("router-link", {
@@ -3445,7 +3445,7 @@ var render = function render() {
     staticStyle: {
       background: "#f1f1f1",
       color: "#333",
-      border: "2px solid #0036ca",
+      border: "2px solid var(--defaltColor)",
       width: "93%"
     },
     attrs: {
@@ -15655,7 +15655,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader2 {\r\n    position: fixed;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%,-50%);\r\n    background: #000000d1;\r\n    padding: 9px 9px;\r\n    border-radius: 8px;\r\n    color: white;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader2 {\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    background: #000000d1;\n    padding: 9px 9px;\n    border-radius: 8px;\n    color: white;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15679,7 +15679,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader {\r\n    position: fixed;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%,-50%);\r\n    background: #00000085;\r\n    padding: 25px 25px;\r\n    border-radius: 8px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader {\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    background: #00000085;\n    padding: 25px 25px;\n    border-radius: 8px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15703,7 +15703,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.languagechange[data-v-2a1c1b9c] {\r\n    width: 100px;\r\n    float: right;\n}\nsection.vh-100[data-v-2a1c1b9c] {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    width: 100%;\n}\n.blurerror input[data-v-2a1c1b9c] {\r\n    border: 1px solid red !important;\n}\n.blurerror label[data-v-2a1c1b9c] {\r\n    color: red !important;\n}\n.blursuccess input[data-v-2a1c1b9c] {\r\n    border: 1px solid green !important;\n}\n.blursuccess label[data-v-2a1c1b9c] {\r\n    color: green !important;\n}\n.divider[data-v-2a1c1b9c]:after,\r\n.divider[data-v-2a1c1b9c]:before {\r\n    content: \"\";\r\n    flex: 1;\r\n    height: 1px;\r\n    background: #eee;\n}\n*[data-v-2a1c1b9c],\r\n*[data-v-2a1c1b9c]:focus {\r\n    outline: none\n}\r\n\r\n/* .form{\r\n  width: 500px;\r\n  margin: 0 auto;\r\n  margin-top: 150px;\r\n  font-family: sans-serif;\r\n  background: #fff\r\n} */\n.form-item[data-v-2a1c1b9c] {\r\n    position: relative;\r\n    margin-bottom: 15px\n}\n.form-item input[data-v-2a1c1b9c] {\r\n    display: block;\r\n    width: 100%;\r\n    height: 40px;\r\n    background: transparent;\r\n    border: solid 1px #ccc;\r\n    transition: all .3s ease;\r\n    padding: 0 15px\n}\n.form-item input[data-v-2a1c1b9c]:focus {\r\n    border-color: blue\n}\n.form-item label[data-v-2a1c1b9c] {\r\n    position: absolute;\r\n    cursor: text;\r\n    z-index: 2;\r\n    top: 13px;\r\n    left: 10px;\r\n    font-size: 12px;\r\n    font-weight: bold;\r\n    background: #fff;\r\n    padding: 0 10px;\r\n    color: #999;\r\n    transition: all .3s ease\n}\n.form-item input:focus+label[data-v-2a1c1b9c],\r\n.form-item input:valid+label[data-v-2a1c1b9c] {\r\n    font-size: 11px;\r\n    top: -5px\n}\n.form-item input:focus+label[data-v-2a1c1b9c] {\r\n    color: blue\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.languagechange[data-v-2a1c1b9c] {\n    width: 100px;\n    float: right;\n}\nsection.vh-100[data-v-2a1c1b9c] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 100%;\n}\n.blurerror input[data-v-2a1c1b9c] {\n    border: 1px solid red !important;\n}\n.blurerror label[data-v-2a1c1b9c] {\n    color: red !important;\n}\n.blursuccess input[data-v-2a1c1b9c] {\n    border: 1px solid green !important;\n}\n.blursuccess label[data-v-2a1c1b9c] {\n    color: green !important;\n}\n.divider[data-v-2a1c1b9c]:after,\n.divider[data-v-2a1c1b9c]:before {\n    content: \"\";\n    flex: 1;\n    height: 1px;\n    background: #eee;\n}\n*[data-v-2a1c1b9c],\n*[data-v-2a1c1b9c]:focus {\n    outline: none\n}\n\n/* .form{\n  width: 500px;\n  margin: 0 auto;\n  margin-top: 150px;\n  font-family: sans-serif;\n  background: #fff\n} */\n.form-item[data-v-2a1c1b9c] {\n    position: relative;\n    margin-bottom: 15px\n}\n.form-item input[data-v-2a1c1b9c] {\n    display: block;\n    width: 100%;\n    height: 40px;\n    background: transparent;\n    border: solid 1px #ccc;\n    transition: all .3s ease;\n    padding: 0 15px\n}\n.form-item input[data-v-2a1c1b9c]:focus {\n    border-color: blue\n}\n.form-item label[data-v-2a1c1b9c] {\n    position: absolute;\n    cursor: text;\n    z-index: 2;\n    top: 13px;\n    left: 10px;\n    font-size: 12px;\n    font-weight: bold;\n    background: #fff;\n    padding: 0 10px;\n    color: #999;\n    transition: all .3s ease\n}\n.form-item input:focus+label[data-v-2a1c1b9c],\n.form-item input:valid+label[data-v-2a1c1b9c] {\n    font-size: 11px;\n    top: -5px\n}\n.form-item input:focus+label[data-v-2a1c1b9c] {\n    color: blue\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15727,7 +15727,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.languagechange[data-v-1b4207c0] {\r\n    width: 100px;\r\n    float: right;\n}\nbutton.button[data-v-1b4207c0] {\r\n    padding: 7px 5px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.languagechange[data-v-1b4207c0] {\n    width: 100px;\n    float: right;\n}\nbutton.button[data-v-1b4207c0] {\n    padding: 7px 5px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -15751,7 +15751,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.surePopup {\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100vh;\r\n    background: #00000080;\r\n    z-index: 999;\r\n    left: 0;\r\n    top: 0;\n}\n.wrap-input100.validate-input {\r\n    border: 1px solid #0000003d;\r\n    padding: 10px 6px;\r\n    margin: 14px 0;\n}\ninput.input100 {\r\n    width: 100%;\r\n    padding: 7px 12px;\r\n    border: 1px solid #7474742e;\n}\nbutton.login100-form-btn {\r\n    border: 0;\r\n    padding: 10px;\r\n    background: red;\r\n    color: white;\r\n    font-size: 13px;\r\n    width: 100%;\r\n    border-radius: 8px;\r\n    margin-bottom: 10px;\n}\n.loginIcon {\r\n    font-size: 21px;\r\n    padding: 8px 10px;\r\n    border-right: 2px solid #9b9b9b;\r\n    margin-right: 9px;\r\n    width: 42px;\n}\r\n\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.borderleft{\n    border-top-left-radius: 20px !important;\n    border-bottom-left-radius: 20px !important;\n}\n.borderright{\n    border-top-right-radius: 20px !important;\n    border-bottom-right-radius: 20px !important;\n}\n.surePopup {\n    position: fixed;\n    width: 100%;\n    height: 100vh;\n    background: #00000080;\n    z-index: 999;\n    left: 0;\n    top: 0;\n}\n.wrap-input100.validate-input {\n    border: 1px solid #0000003d;\n    padding: 10px 6px;\n    margin: 14px 0;\n}\ninput.input100 {\n    width: 100%;\n    padding: 7px 12px;\n    border: 1px solid #7474742e;\n}\nbutton.login100-form-btn {\n    border: 0;\n    padding: 10px;\n    background: red;\n    color: white;\n    font-size: 13px;\n    width: 100%;\n    border-radius: 8px;\n    margin-bottom: 10px;\n}\n.loginIcon {\n    font-size: 21px;\n    padding: 8px 10px;\n    border-right: 2px solid #9b9b9b;\n    margin-right: 9px;\n    width: 42px;\n}\n\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

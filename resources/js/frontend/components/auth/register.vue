@@ -11,42 +11,42 @@
 
     <div>
         <div class="flex-nowrap input-group px-3 mb-3">
-            <span class="input-group-text rounded-0" id="addon-wrapping">
+            <span class="input-group-text rounded-0 borderleft" id="addon-wrapping">
                 <img :src="$asseturl+'img/phone.png'" class="icon"></span>
-                <input type="tel" class="form-control rounded-0" placeholder="+880" aria-label="Username" minlength="10" maxlength="10" @keyup="checkstart" v-model="form.mobile"  aria-describedby="addon-wrapping">
+                <input type="tel" class="form-control rounded-0 borderright" placeholder="+880" aria-label="Username" minlength="10" maxlength="10" @keyup="checkstart" v-model="form.mobile"  aria-describedby="addon-wrapping">
         </div>
         <div class="flex-nowrap input-group px-3">
-            <span class="input-group-text rounded-0" id="addon-wrapping">
+            <span class="input-group-text rounded-0 borderleft" id="addon-wrapping">
                 <img :src="$asseturl+'img/pass.png'" class="icon"></span>
-                <input type="password" class="form-control rounded-0" placeholder="password" v-model="form.password" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="password" class="form-control rounded-0 borderright" placeholder="password" v-model="form.password" aria-label="Username" aria-describedby="addon-wrapping">
         </div>
         <div class="flex-nowrap input-group px-3 py-3">
-            <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
+            <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
                     class="icon"></span>
-            <input type="text" class="form-control rounded-0" placeholder="Invite Code" v-model="form.ref_by" aria-label="Username"
+            <input type="text" class="form-control rounded-0 borderright" placeholder="Invite Code" v-model="form.ref_by" aria-label="Username"
                 aria-describedby="addon-wrapping">
         </div>
         <div class="d-flex gap-5">
             <div class="flex-nowrap input-group px-3">
-                <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
+                <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
                         class="icon"></span>
-                <input type="text" class="form-control rounded-0" placeholder="SMS Code" v-model="otp"
+                <input type="text" class="form-control rounded-0 borderright" placeholder="SMS Code" v-model="otp"
                     aria-label="Username" aria-describedby="addon-wrapping" required>
             </div>
             <div class="w-100">
                 <button type="button" class="btn fw-bold  rounded-0" @click="sentOtp"
-                    style="background: #f1f1f1; color: #333; border: 2px solid #0036ca;  width: 93%;">{{ otpsent }}</button>
+                    style="background: #f1f1f1; color: #333; border: 2px solid var(--defaltColor);  width: 93%;">{{ otpsent }}</button>
             </div>
         </div>
         <div class="d-flex gap-5 pt-3">
             <div class="flex-nowrap input-group px-3">
-                <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
+                <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
                         class="icon"></span>
-                <input type="text" class="form-control rounded-0" placeholder=" Code" v-model="captcha" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control rounded-0 borderright" placeholder=" Code" v-model="captcha" aria-describedby="addon-wrapping">
             </div>
             <div class="w-100">
                 <button  type="button" class="btn fw-bold  rounded-0"
-                    style="background: #f1f1f1; color: #333; border: 2px solid #0036ca;  width: 93%;">{{ genaratedCaptcha }}</button>
+                    style="background: #f1f1f1; color: #333; border: 2px solid var(--defaltColor);  width: 93%;">{{ genaratedCaptcha }}</button>
             </div>
         </div>
 
@@ -56,8 +56,8 @@
 
     <div class="mt-4 text-center w-100">
         <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white"
-            style="background-color: #0036ca;  width: 93%;">Register</button>
-        <router-link :to="{ name: '/login' }" class="btn fw-bold mb-5 mt-2 rounded-0" style="background: #f1f1f1; color: #333; border: 2px solid #0036ca;  width: 93%;">Login</router-link>
+            style="background-color: var(--defaltColor);  width: 93%;">Register</button>
+        <router-link :to="{ name: '/login' }" class="btn fw-bold mb-5 mt-2 rounded-0" style="background: #f1f1f1; color: #333; border: 2px solid var(--defaltColor);  width: 93%;">Login</router-link>
     </div>
 
 </form>
@@ -70,7 +70,7 @@
 <script>
 export default {
     created() {
-        this.genaratedCaptcha = Math.floor(Math.random() * (999999 - 111111) + 111111);
+        this.genaratedCaptcha = Math.floor(Math.random() * (9999 - 1111) + 1111);
         // if (User.loggedIn()) {
         //     this.$router.push({ name: 'home' })
         // }

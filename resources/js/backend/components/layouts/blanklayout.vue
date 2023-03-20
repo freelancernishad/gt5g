@@ -23,10 +23,10 @@
                 <i class="fa-brands fa-docker"></i>
                 <p>Earnings</p>
             </router-link>
-            <router-link :to="{name:'share'}" class="defaltColor navLink">
+            <router-link :to="{name:'package'}" class="defaltColor navLink">
                 <!-- <img class="footer-img" :src="$asseturl+'img/1ss.png'" alt="image1"> -->
-                <i class="fa-solid fa-share-nodes"></i>
-                <p>Share</p>
+                <i class="fa-solid fa-sun-plant-wilt"></i>
+                <p>Plan</p>
             </router-link>
             <router-link :to="{name:'account'}" class="defaltColor navLink">
                 <!-- <img class="footer-img" :src="$asseturl+'img/4mm.png'" alt="image1"> -->
@@ -97,7 +97,7 @@
 
     created() {
                 this.createlink('frontend/css/bootstrap.min.css');
-        this.createlink('css/style.css');
+        this.createlink('css/style.css?ver=1.0.1');
         this.createlink('frontend/css/font-awesome.min.css');
 
         this.createscript('frontend/js/bootstrap.bundle.min.js');

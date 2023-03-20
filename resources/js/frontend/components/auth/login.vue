@@ -10,15 +10,15 @@
 
     <div>
         <div class="flex-nowrap input-group px-3 mb-3">
-            <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/phone.png'"
+            <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/phone.png'"
                     class="icon"></span>
-            <input type="tel" class="form-control rounded-0" placeholder="+880" v-model="form.mobile" aria-label="Username"
+            <input type="tel" class="form-control rounded-0 borderright" placeholder="+880" v-model="form.mobile" aria-label="Username"
                 aria-describedby="addon-wrapping">
         </div>
         <div class="flex-nowrap input-group px-3">
-            <span class="input-group-text rounded-0" id="addon-wrapping"><img :src="$asseturl+'img/pass.png'"
+            <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/pass.png'"
                     class="icon"></span>
-            <input type="password" class="form-control rounded-0" placeholder="password"  v-model="form.password" aria-label="Username"
+            <input type="password" class="form-control rounded-0 borderright" placeholder="password"  v-model="form.password" aria-label="Username"
                 aria-describedby="addon-wrapping">
         </div>
     </div>
@@ -27,12 +27,12 @@
     </div>
 
     <div class="mt-4 text-center w-100">
-        <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white" type="submit" style="background-color: #0036ca;  width: 93%;">
+        <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white" type="submit" style="background-color: var(--defaltColor);  width: 93%;">
             <span  v-if="loadLogin">Please Wait..</span>
             <span  v-else>Login</span>
         </button>
         <router-link :to="{name:'register'}" class="btn fw-bold mb-5 mt-2 rounded-0"
-            style="background: #f1f1f1; color: #333; border: 2px solid #0036ca;  width: 93%;">Register</router-link>
+            style="background: #f1f1f1; color: #333; border: 2px solid var(--defaltColor);  width: 93%;">Register</router-link>
     </div>
 </form>
 
@@ -200,6 +200,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
 
 
 

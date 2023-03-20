@@ -45,15 +45,15 @@
             <p class="ms-2">Current Balance</p>
             <p class="fs-1 fw-bold py-1 text-center">৳{{ parseFloat(row.user.balance).toFixed(2) }}</p>
         </div>
-        <div class="border border-primary input-group mt-2">
-            <span class="bg-white border-0 fw-bold input-group-text py-3 rounded-0 text-primary">৳:</span>
+        <div class="border border-danger input-group mt-2">
+            <span class="bg-white border-0 fw-bold input-group-text py-3 rounded-0 defaltColor">৳:</span>
             <input type="number" v-model="form.amount" placeholder="Withdrawal Amount" class="form-control border-0 rounded-0">
         </div>
-        <div class="border border-primary input-group mt-2">
+        <div class="border border-danger input-group mt-2">
             <span class="bg-white border-0 input-group-text py-3 rounded-0">Realname:</span>
             <input type="text" v-model="row.user.name" readonly disabled  class="form-control border-0 rounded-0">
         </div>
-        <div class="border border-primary input-group mt-2">
+        <div class="border border-danger input-group mt-2">
             <span class="bg-white border-0 input-group-text py-3 rounded-0">Account:</span>
             <input type="number"  v-model="row.user.Bank_account" readonly disabled  class="form-control border-0 rounded-0">
         </div>

@@ -7,7 +7,7 @@
 <div class=" bg-white mx-4 px-4 shadow-lg">
     <div class="d-flex gap-4 justify-content-between ms-0 py-1 w-50 pb-3">
         <div>
-            <img :src="$asseturl+'img/my.png'" alt="">
+            <img width="90px" :src="$asseturl+'img/logo.jpg'" alt="">
         </div>
         <div>
             <p class="mb-0 py-2">{{ row.user.mobile }}</p>
@@ -82,14 +82,22 @@
     </router-link>
 
 </div>
+
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'aboutus'}"  class="mx-3 defaltColor">
                 <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
         <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">About Us</p>
     </router-link>
-
 </div>
+<div class="bg-white  mx-4 my-3 py-4 shadow-lg">
+    <router-link :to="{name:'share'}"  class="mx-3 defaltColor">
+                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
+        <i class="fa-regular fa-rectangle-list"></i>
+        <p class="d-inline fw-bold mb-0 ms-1">Share</p>
+    </router-link>
+</div>
+
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <a :href="$asseturl+''"  class="mx-3 defaltColor">
                 <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->

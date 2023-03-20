@@ -41,7 +41,7 @@
                             <div class="left">{{ list.nameOfPackage }}</div>
                         </div>
                         <div class="three">At Work</div>
-                        <div style="color: rgb(0, 54, 202); font-size: 17px; font-weight: bold">Income:
+                        <div style="color: var(--defaltColor); font-size: 17px; font-weight: bold">Income:
                             ৳{{ list.totalEarn }}</div>
 
                     </div>

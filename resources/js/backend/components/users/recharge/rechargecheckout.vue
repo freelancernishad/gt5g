@@ -55,12 +55,12 @@
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-if="rowss.name=='Bkash'">বিকাশ একাউন্ট</p>
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-else-if="rowss.name=='Nagad'">নগদ একাউন্ট</p>
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-else-if="rowss.name=='Rocket'">রকেট একাউন্ট</p>
-    <p class="mb-1" style="font-size:12px"> {{ paymentNumber }}</p>
+    <p class="mb-1" style="font-size:12px;    padding: 9px 0px;"> {{ paymentNumber }}</p>
   </div>
 
   <div class="d-flex justify-content-between mx-4 fw-bold mt-2">
-    <p class="fs-6  textFontSize" style="font-size: 14px !important;padding: 8px 0px;"> পরিমাণ</p>
-    <p class="fs-6 text-danger"  style="padding: 8px 0px;"> {{ form.amount }} TK</p>
+    <p class="fs-6  textFontSize" style="font-size: 13px !important;padding: 8px 0px;"> পরিমাণ</p>
+    <p class="fs-6 text-danger"  style="padding: 8px 0px;    font-weight: bold;font-family: math;font-size: 18px !important;"> {{ form.amount }} TK</p>
   </div>
 
 </div>
@@ -102,9 +102,9 @@
 
   <div class="">
 
-    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Bkash'" v-model="form.trx" type="text" placeholder="১০ সংখ্যার লেনদেন আইডি">
-    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Nagad'" v-model="form.trx" type="text" placeholder="৮ সংখ্যার লেনদেন আইডি">
-    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Rocket'" v-model="form.trx" type="text" placeholder="১০ সংখ্যার লেনদেন আইডি">
+    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Bkash'" v-model="form.trx" type="text" placeholder="10 সংখ্যার লেনদেন আইডি">
+    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Nagad'" v-model="form.trx" type="text" placeholder="8 সংখ্যার লেনদেন আইডি">
+    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Rocket'" v-model="form.trx" type="text" placeholder="10 সংখ্যার লেনদেন আইডি">
   </div>
 
 </div>
