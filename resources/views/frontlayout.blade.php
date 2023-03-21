@@ -21,8 +21,8 @@
 
     </style>
 
-    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.0') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css?ver=1.0.1') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.1') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css?ver=1.0.2') }}">
 
 
 
@@ -70,6 +70,6 @@ console.log("{{ Auth::user() }}")
         </script>
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}" ></script>
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}" ></script>
-    <script src="{{ asset('js/frontend.js?ver=1.0.17') }}"></script>
+    <script src="{{ asset('js/frontend.js?ver=1.0.18') }}"></script>
 </body>
 </html>

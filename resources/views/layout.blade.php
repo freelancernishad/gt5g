@@ -49,7 +49,7 @@
     {{-- <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}"> --}}
 
-    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.0') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.1') }}">
 
 
 <style>
@@ -73,7 +73,7 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.0.17') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.18') }}"></script>
 
 
 
