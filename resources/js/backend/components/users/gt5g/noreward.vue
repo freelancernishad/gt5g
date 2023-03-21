@@ -18,7 +18,7 @@
 
 
             <div class="bg-gd p-3  text-white">
-                <p class="fs-4 fw-bold text-center">GT- 5G Investment Program
+                <p class="fs-4 fw-bold text-center">SUN ENERGY Investment Program
                 </p>
                 <div class="bg-gdd p-3 rounded-1">
                     <table style="width: 100%;">
@@ -51,7 +51,7 @@ If your TA 3 members earn 100 per day, you get 2% of 100 per day. to it. If your
             </div>
 
         </div>
-        <div>
+        <div class="mt-5">
 
             <!-- <p class="mt-3 px-3">
 
@@ -68,7 +68,7 @@ If your TA 3 members earn 100 per day, you get 2% of 100 per day. to it. If your
                 See the Sales Incentive Chart below:</p> -->
 
                 <div class="bg-gd p-3  text-white">
-                    <p class="fs-4 fw-bold text-center">GT- 5G Team Commission Program
+                    <p class="fs-4 fw-bold text-center">SUN ENERGY Team Commission Program
                     </p>
                     <div class="bg-gdd p-3 rounded-1">
                         <table style="width: 100%;">

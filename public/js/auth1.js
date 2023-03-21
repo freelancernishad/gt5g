@@ -13866,7 +13866,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader2 {\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    background: #000000d1;\n    padding: 9px 9px;\n    border-radius: 8px;\n    color: white;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader2 {\r\n    position: fixed;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%,-50%);\r\n    background: #000000d1;\r\n    padding: 9px 9px;\r\n    border-radius: 8px;\r\n    color: white;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13890,7 +13890,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader {\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    background: #00000085;\n    padding: 25px 25px;\n    border-radius: 8px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.Preloader {\r\n    position: fixed;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%,-50%);\r\n    background: #00000085;\r\n    padding: 25px 25px;\r\n    border-radius: 8px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

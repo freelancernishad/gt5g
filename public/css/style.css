@@ -150,7 +150,7 @@ img.icon {
 
 .bg-gd {
     background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgb(11, 25, 86) 0%, rgb(19, 65, 150) 45%, rgb(95, 17, 41) 100%);
+    background: linear-gradient(90deg, rgb(175 74 0) 0%, rgb(168 69 134) 45%, rgb(194 171 9) 100%);
 }
 
 th {
@@ -173,6 +173,6 @@ thead {
 }
 .bg-gdd {
     background: rgb(19,242,255);
-    background: linear-gradient(180deg, #13f2ff 0%, rgba(16,40,110,1) 45%, rgba(37,23,68,1) 100%);
+    background: linear-gradient(180deg, #fff113 0%, rgb(36 205 102) 45%, rgb(255 183 138) 100%);
 
 }
