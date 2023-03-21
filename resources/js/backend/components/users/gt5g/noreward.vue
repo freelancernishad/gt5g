@@ -45,9 +45,9 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="font-monospace lh-1 lh-sm mb-0 mb-2 pb-0 px-3 py-3">When your 1 team members invest, you will directly earn 10% of their return on investment.
+                <!-- <p class="font-monospace lh-1 lh-sm mb-0 mb-2 pb-0 px-3 py-3">When your 1 team members invest, you will directly earn 10% of their return on investment.
 If your Tier 1 member earns $100 per day, you will get 6% of 100 per day. If your tier 2 members earn 100 per day, you will get 3% of 100 per day.
-If your TA 3 members earn 100 per day, you get 2% of 100 per day. to it. If your team has 10 members or 100 members, this will be a gender-term.</p>
+If your TA 3 members earn 100 per day, you get 2% of 100 per day. to it. If your team has 10 members or 100 members, this will be a gender-term.</p> -->
             </div>
 
         </div>
@@ -100,24 +100,24 @@ If your TA 3 members earn 100 per day, you get 2% of 100 per day. to it. If your
                             </tbody>
                         </table>
                     </div>
-                    <p class="font-monospace lh-1 lh-sm mb-0 mb-2 pb-0 px-3 py-3">
+                    <!-- <p class="font-monospace lh-1 lh-sm mb-0 mb-2 pb-0 px-3 py-3">
                         When your Tier 1 team members invest, you will directly
                         earn 10% of their return on investment. If your Tier 1
                         member earns $100 per day, you will get 8% of 100 per
                         day. If your tier 2 members earn 100 per day, you will
                         get 3% of 100 per day. If your tier 3 member earns 100
                         per day, you get 1% of 100 per day. etc. If your team has
-                        10 members or 100 members, this will be a longer-term benifit</p>
+                        10 members or 100 members, this will be a longer-term benifit</p> -->
                 </div>
 
         </div>
         <div class="px-3">
 
-            <!-- <p class="mt-3">
-                CEO Recruitment Policy: After completing the following tasks, you can contact online customer service to
-                receive rewards. After completing all the following tasks, you can be directly promoted to the CEO of
-                the company team! You can get a monthly salary of ৳3000000.</p>
-            <p> Please refer to the figure below for details:</p> -->
+            <p class="mt-3">When your Team 1/2/3 team members invest, you will directly earn 10% 4% 2% return on their investment.</p>
+            <p class="mt-3">If your Team 1 member earns $100 per day, you will receive 6% of the 100 per day.</p>
+            <p class="mt-3">If your Team 2 member earns $100 per day, you will receive 3% of the 100 per day.</p>
+            <p class="mt-3">If your Team 3 member earns $100 per day, you will receive 2% of the 100 per day. etc</p>
+            <p>If you have 100/500/1000 member investment in your team, it will be a long term benefit for you to get bonus from the company. thank you</p>
 
 
 

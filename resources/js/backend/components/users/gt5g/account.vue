@@ -108,6 +108,46 @@
 </div>
 
 
+<div v-if="settings.telegroup" class="bg-white  mx-4 my-3 py-4 shadow-lg">
+    <a :href="settings.telegroup"  class="mx-3 defaltColor">
+        <i class="fa-regular fa-rectangle-list"></i>
+        <p class="d-inline fw-bold mb-0 ms-1">Official Telegram Group</p>
+    </a>
+</div>
+
+
+<div v-if="settings.telesupport1" class="bg-white  mx-4 my-3 py-4 shadow-lg">
+    <a :href="settings.telesupport1"  class="mx-3 defaltColor">
+        <i class="fa-regular fa-rectangle-list"></i>
+        <p class="d-inline fw-bold mb-0 ms-1">Official Telegram Channel</p>
+    </a>
+</div>
+
+
+<div v-if="settings.telesupport2" class="bg-white  mx-4 my-3 py-4 shadow-lg">
+    <a :href="settings.telesupport2"  class="mx-3 defaltColor">
+        <i class="fa-regular fa-rectangle-list"></i>
+        <p class="d-inline fw-bold mb-0 ms-1">Customer Service</p>
+    </a>
+</div>
+
+
+<div v-if="settings.telesupport3" class="bg-white  mx-4 my-3 py-4 shadow-lg">
+    <a :href="settings.telesupport3"  class="mx-3 defaltColor">
+        <i class="fa-regular fa-rectangle-list"></i>
+        <p class="d-inline fw-bold mb-0 ms-1">Customer Service</p>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 <div class="bg-white mx-4 my-3 py-4 shadow-lg mb-5">
     <router-link :to="{name:'logout'}"  class="mx-3 defaltColor">

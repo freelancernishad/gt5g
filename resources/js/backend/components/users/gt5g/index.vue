@@ -32,6 +32,14 @@
 
         </header>
 
+
+        <div class="d-flex marquee">
+            <marquee>{{ settings.notice }}</marquee>
+            <span>Notice</span>
+        </div>
+
+
+
         <section class="d-flex gap-2 justify-content-between mb-2 mt-3">
 
             <router-link :to="{name:'Recharge'}" class="bg-white fw-bold py-3 shadow-lg text-center w-25 defaltColor homeicons">
@@ -128,4 +136,21 @@ export default {
     font-size: 35px;
 }
 
+.d-flex.marquee {
+    border: 2px solid var(--defaltColor);
+    margin: 18px 21px;
+}
+
+.d-flex.marquee span {
+    background: var(--defaltColor);
+    padding: 5px 14px;
+    color: white;
+    font-weight: 700;
+}
+
+.d-flex.marquee marquee {
+    padding: 5px 14px;
+    background: #d14d0ec7;
+    color: white;
+}
 </style>

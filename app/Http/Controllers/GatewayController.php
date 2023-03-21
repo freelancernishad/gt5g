@@ -15,6 +15,10 @@ class GatewayController extends Controller
     public function index(Request $request)
     {
 
+        $name = $request->name;
+        if($name){
+            return  Gateway::where('name',$name)->first();
+        }
 
 
             return Gateway::all();

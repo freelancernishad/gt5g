@@ -28,13 +28,20 @@
 
 
       </div>
-      <div class="bg-white border border-2 border-danger  mt-3 py-3 shadow w-100">
 
+    <div class="bg-white border border-2 border-danger  mt-3 py-3 shadow w-100" @click="PymamentSelect('onepay')">
         <div class="d-flex gap-2 ms-2 w-50">
-            <p>Pay Type</p> <img src="https://static.vecteezy.com/system/resources/previews/010/141/449/original/check-mark-icon-sign-symbol-design-free-png.png" alt="" style="width: 25px;"> <p>onepay</p>
+            <img :src="$asseturl+'Recharge/onepay.png'" alt="" style="width: 25px;"> <p>OnePay</p> <img v-if="paymentType=='onepay'" src="https://static.vecteezy.com/system/resources/previews/010/141/449/original/check-mark-icon-sign-symbol-design-free-png.png" alt="" style="width: 25px;">
         </div>
-
     </div>
+
+    <div class="bg-white border border-2 border-danger  mt-3 py-3 shadow w-100" @click="PymamentSelect('USDT')">
+        <div class="d-flex gap-2 ms-2 w-50">
+            <img :src="$asseturl+'Recharge/currency_usdttrc20.png'" alt="" style="width: 25px;"> <p>USDT</p> <img  v-if="paymentType=='USDT'" src="https://static.vecteezy.com/system/resources/previews/010/141/449/original/check-mark-icon-sign-symbol-design-free-png.png" alt="" style="width: 25px;">
+        </div>
+    </div>
+
+
     <button class="btn btn-primary mt-3" type="submit">Recharge Now</button>
 </section>
 </form>
@@ -59,6 +66,7 @@ export default {
 
 
             payMethods: '',
+            paymentType: 'onepay',
 
             amount: 0,
             step: 1,
@@ -69,6 +77,9 @@ export default {
     },
     methods: {
 
+        PymamentSelect(type){
+            this.paymentType = type
+        },
 
          randomLetter(length) {
                 let result = 'S'+this.dateformatglobal()[10]+this.dateformatglobal()[11]+this.dateformatglobal()[12]+Math.floor(Math.random() * (999999999999 - 11111111111));
@@ -77,13 +88,21 @@ export default {
         async onSubmit() {
 
             if (this.settings.min_deposit > Number(this.form.amount)) {
-                Notification.customError(`Minimum deposit amount ${this.settings.min_deposit}`);
+                this.notifiyGlobal(`Minimum deposit amount ${this.settings.min_deposit}`);
             } else {
                 this.form['orderid'] = this.randomLetter(20);
                 localStorage.setItem('rechargeData',JSON.stringify(this.form))
                 var regTimer = new Date(new Date().getTime() + 300000);
                 localStorage.setItem('regTimer',regTimer);
-                this.$router.push({ name: 'rechargepage' });
+
+                if(this.paymentType=='onepay'){
+                    this.$router.push({ name: 'rechargepage' });
+
+                }else if(this.paymentType=='USDT'){
+                    this.$router.push({ name: 'rechargepageUsd' });
+
+                }
+
             }
 
 
