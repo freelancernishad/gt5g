@@ -76,7 +76,7 @@ Route::post('refound', function (Request $request) {
         $checkin = $user->checkin;
 
 
-        $task_comisition = rand(1,20);
+        $task_comisition = rand(1,7);
 
         if($checkin){
             $newBalance = balanceIncrease($user->balance, $task_comisition);

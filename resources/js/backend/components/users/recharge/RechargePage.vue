@@ -11,7 +11,7 @@
 
             <div class="d-flex mx-3 my-3 mb-3">
                 <div class="w-50 " style="display: flex;align-items: center;">
-                    <img :src="$asseturl + 'Recharge/onepay.png'" width="30px" alt=""> <span style="    font-size: 24px;
+                    <img :src="$asseturl + 'Recharge/onepay2.png'" width="30px" alt=""> <span style="    font-size: 24px;
         font-weight: 700;">OnePay</span>
                 </div>
                 <div class="text-end w-50" style="font-size: 24px;">

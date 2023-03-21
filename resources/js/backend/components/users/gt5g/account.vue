@@ -62,7 +62,7 @@
     <router-link :to="{name:'peraccpass'}"  class="mx-3 defaltColor">
                 <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
         <i class="fa-regular fa-rectangle-list"></i>
-        <p class="d-inline fw-bold mb-0 ms-1">personal</p>
+        <p class="d-inline fw-bold mb-0 ms-1">Personal</p>
     </router-link>
 
 </div>

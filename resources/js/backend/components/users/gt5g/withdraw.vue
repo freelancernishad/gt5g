@@ -30,7 +30,7 @@
         <div class="bg-white border mb-2 mx-4 px-3 py-2 shadow">
             <div class="input-group">
                 <span class="bg-white border-0 input-group-text">Bank Account:</span>
-                <input type="number"  v-model="row.user.Bank_account" aria-label="First name" class="form-control border-0">
+                <input type="text"  v-model="row.user.Bank_account" aria-label="First name" class="form-control border-0">
               </div>
         </div>
         <div class="w-100 text-center px-4" >
@@ -58,9 +58,22 @@
             <input type="number"  v-model="row.user.Bank_account" readonly disabled  class="form-control border-0 rounded-0">
         </div>
 
-        <div class="w-100 text-center px-4" >
+        <div class="w-100 text-center px-4 mt-3" >
             <button class="btn fw-bold rounded-0 text-white w-100" style="background-color: var(--defaltColor);">Confirm Withdraw</button>
         </div>
+
+
+        <p>You can withdraw daily</p>
+        <p>Minimum withdrawal is Rs.300</p>
+        <p>Withdrawal Charge 10%</p>
+        <p>Deposit and withdrawal can be Done at any time of 24 hours. Thank you</p>
+
+
+
+
+
+
+
     </form>
 
 

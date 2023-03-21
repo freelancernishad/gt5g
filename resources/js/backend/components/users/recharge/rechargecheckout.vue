@@ -19,7 +19,7 @@
 </header>
 
     <div class="text-center mt-4">
-    <img src="https://checkout-bdt.onepay.news/static/img/pixlogo.2432dd36.png" alt="" style="width: 75px;">
+    <img :src="$asseturl+'Recharge/onepay2.png'" alt="" style="width: 75px;">
     <p style="font-size: 16px;font-weight: 600;">ONE PAY</p>
 
 

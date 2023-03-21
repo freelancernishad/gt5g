@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SUN ENERGY</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/img/20221107_174650.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('sun.jpg') }}">
     <!-- Bootstrap CSS -->
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet" >
     <link href="{{ asset('frontend/css/font-awesome.min.css') }}" rel="stylesheet" >
@@ -21,8 +21,8 @@
 
     </style>
 
-    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.1') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css?ver=1.0.2') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.2') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css?ver=1.0.3') }}">
 
 
 
@@ -70,6 +70,6 @@ console.log("{{ Auth::user() }}")
         </script>
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}" ></script>
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}" ></script>
-    <script src="{{ asset('js/frontend.js?ver=1.0.18') }}"></script>
+    <script src="{{ asset('js/frontend.js?ver=1.0.19') }}"></script>
 </body>
 </html>

@@ -227,8 +227,8 @@ function planId($balance){
 function SmsNocSmsSend($deccription = '', $applicant_mobile = '1909756552')
 {
 
-    $smsnocapikey = '177|umN42gvIDUBrl3sQiJW4Q0mkh2tHWBx2Gyguum2h ';
-    $smsnocsenderid = '1234';
+    $smsnocapikey = '179|WNYLhDrRxgrKVsTwWtklf4YHxT8ZiSzCHHJoPdRS ';
+    $smsnocsenderid = '8809617611301';
 
 $curl = curl_init();
 
