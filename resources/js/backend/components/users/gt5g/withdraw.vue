@@ -166,7 +166,7 @@ export default {
                         var res = await this.callApi('post', `/api/admin/withdrawal`, this.form);
                         if(res.data==422){
 
-                            this.notifiy('Falied! withdraw cant be proccess.You must make a reachage first!');
+                            this.notifiy('Falied! withdraw cant be proccess.You must make a purchase first!');
 
 
                         }else if(res.data==444){

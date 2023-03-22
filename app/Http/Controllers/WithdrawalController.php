@@ -6,6 +6,7 @@ use App\Models\Deposit;
 use App\Models\Plan;
 use App\Models\User;
 use App\Models\Gateway;
+use App\Models\PackageBuy;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 
@@ -89,8 +90,8 @@ class WithdrawalController extends Controller
     public function store(Request $request)
     {
         $user_id = $request->user_id;
-        $dpcount = Deposit::where(['user_id'=>$user_id,'status'=>'approved'])->count();
-        // if($dpcount>0){
+        $dpcount = PackageBuy::where(['userid'=>$user_id])->count();
+        if($dpcount>0){
 
 
 
@@ -120,9 +121,9 @@ class WithdrawalController extends Controller
            transitionCreate($user->id,$request->amount,0,$amount,'decrease','','Withdraw','');
 
 
-    // }else{
-    //     return 422;
-    // }
+    }else{
+        return 422;
+    }
 
     }
 
