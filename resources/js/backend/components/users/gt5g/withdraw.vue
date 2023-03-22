@@ -94,7 +94,9 @@ export default {
             isActive:true,
             Messageactive:false,
             Message:'',
-
+            charge: 0,
+            Payable: 0,
+            balance: 0,
             getways: {},
             gateways: {},
             Bank_Name:null,
@@ -155,6 +157,11 @@ export default {
 
                     }else {
                         var id = localStorage.getItem('userid');
+                        var charge = ((this.form.amount * this.gateways.percent_charge) / 100);
+                        this.charge = charge;
+                        this.Payable = this.form.amount - charge;
+                        this.balance = this.user.user.balance - this.form.amount;
+
                         this.form['user_id'] = id;
                         this.form['curency'] = this.gateways.currency;
                         this.form['rate'] = this.gateways.rate;
