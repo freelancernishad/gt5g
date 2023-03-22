@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SUN ENERGY</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('sun.jpg') }}">
@@ -70,6 +70,6 @@ console.log("{{ Auth::user() }}")
         </script>
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}" ></script>
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}" ></script>
-    <script src="{{ asset('js/frontend.js?ver=1.0.19') }}"></script>
+    <script src="{{ asset('js/frontend.js?ver=1.0.20') }}"></script>
 </body>
 </html>

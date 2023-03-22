@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>SUN ENERGY</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('sun.jpg') }}">
     {{-- <link rel="stylesheet" href="{{ asset('dashboard_asset/css/all.min.css') }}"> --}}
 
@@ -73,7 +73,7 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.0.19') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.20') }}"></script>
 
 
 

@@ -30,7 +30,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Total Users</div>
-                                        <div class="item-number"><span></span><span  >{{row.totalUser}}</span></div>
+                                        <div class="item-number"><span></span><span  >{{rowss.totalUser}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Total Deposit</div>
-                                        <div class="item-number"><span>৳</span><span  >{{row.totalDeposit}}</span></div>
+                                        <div class="item-number"><span>৳</span><span  >{{rowss.totalDeposit}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Total Withdrawals</div>
-                                        <div class="item-number"><span>৳</span><span  >{{row.totalWithdrawal}}</span></div>
+                                        <div class="item-number"><span>৳</span><span  >{{rowss.totalWithdrawal}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Today Deposit</div>
-                                        <div class="item-number"><span>৳</span><span  >{{row.todayApprovedDeposit}}</span></div>
+                                        <div class="item-number"><span>৳</span><span  >{{rowss.todayApprovedDeposit}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Today Withdrawals</div>
-                                        <div class="item-number"><span>৳</span><span  >{{row.todayApprovedWithdrawal}}</span></div>
+                                        <div class="item-number"><span>৳</span><span  >{{rowss.todayApprovedWithdrawal}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Pending Deposit</div>
-                                        <div class="item-number"><span  >{{row.todayPendingDepositCount}}</span></div>
+                                        <div class="item-number"><span  >{{rowss.todayPendingDepositCount}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Pending Withdrawals</div>
-                                        <div class="item-number"><span  >{{row.todayPendingWithdrawalCount}}</span></div>
+                                        <div class="item-number"><span  >{{rowss.todayPendingWithdrawalCount}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Pending Deposit Amount</div>
-                                        <div class="item-number"><span>৳</span><span  >{{row.todayPendingDepositAmount}}</span></div>
+                                        <div class="item-number"><span>৳</span><span  >{{rowss.todayPendingDepositAmount}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +176,7 @@
 
                                     <div class="item-content">
                                         <div class="item-title">Pending Withdrawal Amount</div>
-                                        <div class="item-number"><span>৳</span><span  >{{row.todayPendingWithdrawalAmount}}</span></div>
+                                        <div class="item-number"><span>৳</span><span  >{{rowss.todayPendingWithdrawalAmount}}</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@ export default {
 
     data() {
         return {
-            row:{},
+            rowss:{},
              chartData: {
                 labels: [],
                 datasets: [],
@@ -279,7 +279,7 @@ export default {
     methods: {
         async getdata(){
             var res = await this.callApi('get',`/api/backend/dashboard`,[]);
-            this.row = res.data;
+            this.rowss = res.data;
 
 // console.log(res.data.dpChart.reports,res.data.dpChart.allmonth)
 

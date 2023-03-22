@@ -55,7 +55,7 @@
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-if="rowss.name=='Bkash'">বিকাশ একাউন্ট</p>
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-else-if="rowss.name=='Nagad'">নগদ একাউন্ট</p>
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-else-if="rowss.name=='Rocket'">রকেট একাউন্ট</p>
-    <p class="mb-1" style="font-size:12px;    padding: 9px 0px;"> {{ paymentNumber }}</p>
+    <p class="mb-1" style="font-size:14px;    padding: 9px 0px;"> {{ paymentNumber }} <i class="fa-regular fa-clone" style="cursor:pointer;margin-left:5px" @click="copyref"></i></p>
   </div>
 
   <div class="d-flex justify-content-between mx-4 fw-bold mt-2">
@@ -178,6 +178,14 @@ export default {
         }
     },
     methods: {
+
+
+        copyref() {
+                navigator.clipboard.writeText(this.paymentNumber);
+                this.notifiyGlobal('copied success')
+            },
+
+
           async getData() {
 
 

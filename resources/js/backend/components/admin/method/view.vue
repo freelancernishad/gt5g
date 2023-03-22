@@ -140,39 +140,39 @@ export default {
             var res = await this.callApi('get',`/api/admin/withdraw/gateway/${id}`,[]);
             this.form = res.data;
 
-var getName = '';
-var getStatusText = '';
-var balaceAmount = '';
-var balaceVerify = '';
-            if(this.form.name=="Bkash"){
-            getName = 'bkash_number';
-            getStatusText = 'bkash_enabled';
+// var getName = '';
+// var getStatusText = '';
+// var balaceAmount = '';
+// var balaceVerify = '';
+//             if(this.form.name=="Bkash"){
+//             getName = 'bkash_number';
+//             getStatusText = 'bkash_enabled';
 
-            balaceAmount = 'bkash_balance';
-            balaceVerify = 'bkash_balance_verify';
+//             balaceAmount = 'bkash_balance';
+//             balaceVerify = 'bkash_balance_verify';
 
-        }else if(this.form.name=="Nagad"){
-            getName = 'nagad_number';
-            getStatusText = 'nagad_enabled';
+//         }else if(this.form.name=="Nagad"){
+//             getName = 'nagad_number';
+//             getStatusText = 'nagad_enabled';
 
-            balaceAmount = 'nagad_balance';
-            balaceVerify = 'nagad_balance_verify';
-        }else if(this.form.name=="Rocket"){
-            getName = 'rocket_number';
-            getStatusText = 'rocket_enabled';
+//             balaceAmount = 'nagad_balance';
+//             balaceVerify = 'nagad_balance_verify';
+//         }else if(this.form.name=="Rocket"){
+//             getName = 'rocket_number';
+//             getStatusText = 'rocket_enabled';
 
-            balaceAmount = 'rocket_balance';
-            balaceVerify = 'rocket_balance_verify';
-        }
-            var bkash_balance = await this.callApi('get',`/api/getPayment/data?balaceAmount=${balaceAmount}`,[]);
-            this.AccountBalance = bkash_balance.data[0].value
-            var bkash_balance_verify = await this.callApi('get',`/api/getPayment/data?balaceAmount=${balaceVerify}`,[]);
+//             balaceAmount = 'rocket_balance';
+//             balaceVerify = 'rocket_balance_verify';
+//         }
+//             var bkash_balance = await this.callApi('get',`/api/getPayment/data?balaceAmount=${balaceAmount}`,[]);
+//             this.AccountBalance = bkash_balance.data[0].value
+//             var bkash_balance_verify = await this.callApi('get',`/api/getPayment/data?balaceAmount=${balaceVerify}`,[]);
 
-        if(bkash_balance_verify.data[0].value=='1'){
-            this.balanceverify = 'active'
-        }else{
-            this.balanceverify = 'deactive'
-        }
+//         if(bkash_balance_verify.data[0].value=='1'){
+//             this.balanceverify = 'active'
+//         }else{
+//             this.balanceverify = 'deactive'
+//         }
 
         this.proloader = false
 
