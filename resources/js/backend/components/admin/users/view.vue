@@ -301,7 +301,7 @@
                         <tr v-for="item in rows.referList">
                             <td>{{ item.username }}</td>
 
-                            <td>{{ item.plans.name }}</td>
+                            <!-- <td>{{ item.plans.name }}</td> -->
                             <td>{{ item.balance }}</td>
                             <td>{{ item.status }}</td>
                             <td>
