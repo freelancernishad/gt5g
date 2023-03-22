@@ -11,7 +11,7 @@
         </div>
         <div>
             <p class="mb-0 py-2">{{ row.user.mobile }}</p>
-            <p class="mb-0 py-2">{{ row.user.username }}</p>
+            <p class="mb-0 py-2">UID: {{ row.user.username }}</p>
         </div>
     </div>
     <div class="border-top d-flex justify-content-around lh-1 pt-4">
