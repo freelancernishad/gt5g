@@ -81,7 +81,7 @@
 
 
 
-    <div data-v-464536f2="" class="flex_row_center" v-if="rowss.name=='Bkash'">
+    <div data-v-464536f2="" class="flex_row_center" v-if="rowss.name=='bKash'">
         <div data-v-464536f2="" style="width: 155px; height: 124px; margin: 10px;">
             <img width="100%" :src="$asseturl+'Recharge/tips.c9cf750b.png'" draggable="false">
         </div>

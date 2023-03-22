@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OtpController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TaskController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\DepositController;
 use App\Http\Controllers\GatewayController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\SettingController;
 use  App\Http\Controllers\api\authController;
@@ -23,7 +25,6 @@ use App\Http\Controllers\TransitionController;
 use App\Http\Controllers\UddoktapayController;
 use App\Http\Controllers\WithdrawalController;
 use App\Http\Controllers\BlogCategoryController;
-use App\Http\Controllers\OtpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -146,6 +147,10 @@ Route::post('check/otp',[OtpController::class,'checkotp']);
 Route::group([
     'middleware' => 'auth:api'
 ], function () {
+
+
+
+    Route::get('get/balance',[MessageController::class ,'getBalance']);
 
 
 

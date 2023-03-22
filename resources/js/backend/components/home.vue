@@ -184,6 +184,29 @@
                     </div>
 
 
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-12">
+                                    <div class="item-icon bg-light-red">
+                                        <i class="flaticon-money text-red"></i>
+                                    </div>
+
+                                    <div class="item-content">
+                                        <div class="item-title">SMS BALANCE</div>
+                                        <div class="item-number"><span>৳</span><span  >{{smsDetails.remaining_unit}}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
                 </div>
                 <!-- Dashboard summery End Here -->
                 <div class="row">
@@ -269,14 +292,23 @@ export default {
                 responsive: true,
                 maintainAspectRatio: false,
             },
+            smsDetails:{},
 
         };
     },
     mounted() {
         this.getdata()
+        this.getSmsNoc()
 
     },
     methods: {
+
+
+        async getSmsNoc(){
+            var res = await this.callApi('get','/api/get/balance',[]);
+            this.smsDetails = res.data.data;
+        },
+
         async getdata(){
             var res = await this.callApi('get',`/api/backend/dashboard`,[]);
             this.rowss = res.data;
