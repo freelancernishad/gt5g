@@ -59,7 +59,7 @@
                             <div data-v-705785f8="" v-else class="flex_row_left afz12 acl252525">
                                 <div data-v-705785f8="" class="amgr10">
                                     <div data-v-705785f8="" class="img36 amgr10">
-                                        <img style="width: 18px;margin-right: 12px;"  v-if="payname=='Bkash'" :src="$asseturl+'Recharge/bkash.f4a39710.png'" draggable="false">
+                                        <img style="width: 18px;margin-right: 12px;"  v-if="payname=='bKash'" :src="$asseturl+'Recharge/bkash.f4a39710.png'" draggable="false">
                                         <img style="width: 18px;margin-right: 12px;" v-else-if="payname=='Nagad'" :src="$asseturl+'Recharge/nagad.826da2e3.png'" draggable="false">
                                     </div>
                                 </div>
@@ -81,10 +81,10 @@
                         <div data-v-705785f8="" class="lineh50 paddinglr40 afz13 fontweight">পেমেন্ট চ্যানেল</div>
 
 
-                        <div data-v-705785f8="" class="lineh50 paddinglr40 flex_row_left afz13 fontweight" style="cursor: pointer;" v-for="pay in rowss" :key="'pay' + pay.id" v-if="pay.name=='Bkash' || pay.name=='Nagad'"  @click="selectMethod(pay.id,pay.name)">
+                        <div data-v-705785f8="" class="lineh50 paddinglr40 flex_row_left afz13 fontweight" style="cursor: pointer;" v-for="pay in rowss" :key="'pay' + pay.id" v-if="pay.name=='bKash' || pay.name=='Nagad'"  @click="selectMethod(pay.id,pay.name)">
                             <div data-v-705785f8="" class="img24_24 amgr10">
 
-                                <img width="100%" v-if="pay.name=='Bkash'"  :src="$asseturl+'Recharge/bkash.f4a39710.png'" draggable="false">
+                                <img width="100%" v-if="pay.name=='bKash'"  :src="$asseturl+'Recharge/bkash.f4a39710.png'" draggable="false">
                                 <img width="100%" v-if="pay.name=='Nagad'"  :src="$asseturl+'Recharge/nagad.826da2e3.png'" draggable="false">
 
                             </div>

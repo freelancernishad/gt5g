@@ -47,12 +47,12 @@
 
 </div>
 <div class="border border-top-0 mb-4 mx-3 rounded">
-  <p class="bg-primary text-white headFont paddinglr20 paddingtb10" v-if="rowss.name=='Bkash'"> স্টেপ ১. বিকাশ ইনফর্মেশন </p>
+  <p class="bg-primary text-white headFont paddinglr20 paddingtb10" v-if="rowss.name=='bKash'"> স্টেপ ১. বিকাশ ইনফর্মেশন </p>
   <p class="bg-primary text-white headFont paddinglr20 paddingtb10" v-else-if="rowss.name=='Nagad'"> স্টেপ ১. নগদ ইনফর্মেশন </p>
   <p class="bg-primary text-white headFont paddinglr20 paddingtb10" v-else-if="rowss.name=='Rocket'"> স্টেপ ১. রকেট ইনফর্মেশন </p>
   <div class="d-flex justify-content-between mx-4" style="border-bottom: 1px dotted black;">
 
-    <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-if="rowss.name=='Bkash'">বিকাশ একাউন্ট</p>
+    <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-if="rowss.name=='bKash'">বিকাশ একাউন্ট</p>
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-else-if="rowss.name=='Nagad'">নগদ একাউন্ট</p>
     <p class="text-body-secondary mb-1 textFontSize" style="color: #979797;padding: 10px 0px;" v-else-if="rowss.name=='Rocket'">রকেট একাউন্ট</p>
     <p class="mb-1" style="font-size:16px;    padding: 9px 0px;"> {{ paymentNumber }} <i class="fa-regular fa-clone" style="cursor:pointer;margin-left:5px" @click="copyref"></i></p>
@@ -67,7 +67,7 @@
 <!-- <hr class="mx-4"> -->
 
 <div class="border border-top-0 mb-4 mx-3 rounded">
-  <p class="bg-primary text-white mb-1 headFont paddinglr20 paddingtb10" v-if="rowss.name=='Bkash'"> ধাপ 2. বিকাশ ট্রান্সফারের মাধ্যমে আপনি যে পরিমাণ রিচার্জ করতে চান তা আমাদের কাছে ট্রান্সফার করুন। </p>
+  <p class="bg-primary text-white mb-1 headFont paddinglr20 paddingtb10" v-if="rowss.name=='bKash'"> ধাপ 2. বিকাশ ট্রান্সফারের মাধ্যমে আপনি যে পরিমাণ রিচার্জ করতে চান তা আমাদের কাছে ট্রান্সফার করুন। </p>
   <p class="bg-primary text-white mb-1 headFont paddinglr20 paddingtb10" v-else-if="rowss.name=='Nagad'"> ধাপ 2. নগদ ট্রান্সফারের মাধ্যমে আপনি যে পরিমাণ রিচার্জ করতে চান তা আমাদের কাছে ট্রান্সফার করুন। </p>
   <p class="bg-primary text-white mb-1 headFont paddinglr20 paddingtb10" v-else-if="rowss.name=='Rocket'"> ধাপ 2. রকেট ট্রান্সফারের মাধ্যমে আপনি যে পরিমাণ রিচার্জ করতে চান তা আমাদের কাছে ট্রান্সফার করুন। </p>
   <p class="ms-3 my-1">
@@ -93,7 +93,7 @@
 
 <!--
   <div class="text-center">
-    <img v-if="rowss.name=='Bkash'" :src="$asseturl+'Recharge/bkash_tnxid_2.png'" alt="" class="w-50">
+    <img v-if="rowss.name=='bKash'" :src="$asseturl+'Recharge/bkash_tnxid_2.png'" alt="" class="w-50">
     <img v-else-if="rowss.name=='Nagad'" :src="$asseturl+'Recharge/nagad_tnxid_1.jpg'" alt="" class="w-50">
     <img  v-else-if="rowss.name=='Rocket'" src="" alt="" class="w-50">
   </div> -->
@@ -102,7 +102,7 @@
 
   <div class="">
 
-    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Bkash'" v-model="form.trx" type="text" placeholder="10 সংখ্যার লেনদেন আইডি">
+    <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='bKash'" v-model="form.trx" type="text" placeholder="10 সংখ্যার লেনদেন আইডি">
     <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Nagad'" v-model="form.trx" type="text" placeholder="8 সংখ্যার লেনদেন আইডি">
     <input class="form-control mb-3 onepaynumberInput" v-if="rowss.name=='Rocket'" v-model="form.trx" type="text" placeholder="10 সংখ্যার লেনদেন আইডি">
   </div>
