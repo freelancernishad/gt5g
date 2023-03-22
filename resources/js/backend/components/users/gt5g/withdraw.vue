@@ -160,7 +160,7 @@ export default {
                         var charge = ((this.form.amount * this.gateways.percent_charge) / 100);
                         this.charge = charge;
                         this.Payable = this.form.amount - charge;
-                        this.balance = this.user.user.balance - this.form.amount;
+                        this.balance = this.row.user.balance - this.form.amount;
 
                         this.form['user_id'] = id;
                         this.form['curency'] = this.gateways.currency;
