@@ -291,7 +291,7 @@
                         <tr>
                             <th>Username</th>
 
-                            <th>Plan</th>
+                            <!-- <th>Plan</th> -->
                             <th>Balance</th>
                             <th>Status</th>
                             <th>Actions</th>
