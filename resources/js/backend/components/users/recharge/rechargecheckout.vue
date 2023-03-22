@@ -189,7 +189,7 @@ export default {
 
             var res = await this.callApi('get', `/api/admin/withdraw/gateway/${this.form.method}`, []);
             this.rowss = res.data;
-            if(this.rowss.name=='Bkash'){
+            if(this.rowss.name=='bKash'){
                 const random = Math.floor(Math.random() * this.bkash.length);
                 this.paymentNumber = this.bkash[random];
             }else if(this.rowss.name=='Nagad'){
