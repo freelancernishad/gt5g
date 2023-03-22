@@ -10,10 +10,14 @@
         <div class="bg-white mx-4 px-4 text-center shadow-lg lh-1">
           <div>
 
-            <p class="mb-0 pt-2">My Invitation Code<p>
+            <p class="mb-0 pt-2">My Invitation Code</p>
                 <p class="fs-5 fw-bold mb-2">{{ row.user.username }}</p>
-             <button class="btn fw-bold mb-4 mt-2 rounded-0 text-white w-100"  @click="copyref" style="background-color: var(--defaltColor);">Copy Link</button>
-          </div>
+             <button class="copyBtn btn fw-bold mb-4 mt-2 rounded-0 text-white w-100" :data-clipboard-text="ref"  style="background-color: var(--defaltColor);">Copy Link</button>
+             <!-- <button class="copyBtn btn fw-bold mb-4 mt-2 rounded-0 text-white w-100"  @click="copyref" style="background-color: var(--defaltColor);">Copy Link</button> -->
+             <!-- <button class="copyBtn" data-clipboard-text="Copy me!">Copy</button> -->
+
+
+            </div>
           <div style="background-color: #f1f1f1;" class="mb-3 py-3">
             <p>My QR code</p>
             <img :src="'https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='+ref+'&choe=UTF-8'" class="img-thumbnail w-75" :alt='ref'/>
@@ -41,7 +45,18 @@
 </template>
 
 <script>
+import ClipboardJS from 'clipboard';
 export default {
+    created(){
+
+        const clipboard = new ClipboardJS('.copyBtn');
+        clipboard.on('success', (e)=> {
+                  this.notifiy('Refer link copied success')
+        });
+        clipboard.on('error', (e)=> {
+            this.notifiy('Failed to copy to clipboard!');
+        });
+    },
     data() {
         return {
             ref: '',
