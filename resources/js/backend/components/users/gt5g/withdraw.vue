@@ -176,6 +176,8 @@ export default {
                             this.notifiy('Falied! withdraw cant be proccess.You must make a purchase first!');
 
 
+                        }else if(res.data==445){
+                            this.notifiy('Falied! You can windraw one time in a day!.');
                         }else if(res.data==444){
                             this.notifiy('Falied! withdraw cant be proccess.');
                         }else{

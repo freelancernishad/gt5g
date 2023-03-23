@@ -90,7 +90,9 @@ class WithdrawalController extends Controller
     public function store(Request $request)
     {
         $user_id = $request->user_id;
+
         $dpcount = PackageBuy::where(['userid'=>$user_id])->count();
+
         if($dpcount>0){
 
 
@@ -102,7 +104,14 @@ class WithdrawalController extends Controller
         $user = User::find($userid);
         $method = Gateway::find($methodid);
         $userbalance = $user->balance;
+
+        $created_at = date('Y-m-d');
+
+        $withdrawCount = Withdrawal::where("created_at","LIKE","%$created_at%")->count();
+
+        if($withdrawCount>0) return 445;
         if($userbalance<=$method->min_amount) return 444;
+
 
 
         if($userbalance==null) $userbalance = 0;

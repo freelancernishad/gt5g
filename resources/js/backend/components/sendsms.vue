@@ -2,12 +2,12 @@
     <div>
         <loader v-if="proloader" object="#ff9633" color1="#ffffff" color2="#17fd3d" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
         <div class="breadcrumbs-area">
-            <h3>Deposit List</h3>
+            <h3>SMS</h3>
             <ul>
                 <li>
                     <router-link :to="{ name: 'Dashboard' }">Home</router-link>
                 </li>
-                <li>Deposit List</li>
+                <li>SMS</li>
             </ul>
         </div>
         <form  @submit.stop.prevent="sentSms">
