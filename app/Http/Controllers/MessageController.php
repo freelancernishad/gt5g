@@ -14,6 +14,22 @@ class MessageController extends Controller
 {
 
 
+    public function smsNotice(Request $request)
+    {
+
+        $message = $request->message;
+         $users =  User::all();
+         foreach ($users as $value) {
+
+       $mobile =  substr($value->mobile, -10);
+        SmsNocSmsSend($message,$mobile);
+         }
+
+    }
+
+
+
+
     public function getBalance(Request $request)
     {
 

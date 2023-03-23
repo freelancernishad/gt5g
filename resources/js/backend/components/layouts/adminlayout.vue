@@ -119,6 +119,12 @@
 
 
                         <li  class="nav-item" @click="submenu(0)" >
+                            <router-link :to="{name:'sendsms'}" class="nav-link"><i
+                                    class="flaticon-dashboard"></i><span>Sms Notice</span></router-link>
+                        </li>
+
+
+                        <li  class="nav-item" @click="submenu(0)" >
                             <router-link :to="{name:'packages'}" class="nav-link"><i
                                     class="flaticon-dashboard"></i><span>Packages</span></router-link>
                         </li>

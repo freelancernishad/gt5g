@@ -143,10 +143,12 @@ Route::get('count/username/check', [authController::class,'usernamecheck']);
 Route::post('sent/otp',[OtpController::class,'setotp']);
 Route::post('check/otp',[OtpController::class,'checkotp']);
 
-
+Route::post('sent/notice/sms',[MessageController::class ,'smsNotice']);
 Route::group([
     'middleware' => 'auth:api'
 ], function () {
+
+
 
 
 

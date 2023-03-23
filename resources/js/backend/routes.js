@@ -159,6 +159,8 @@ let TikTok = require('./components/users/tiktok/t.vue').default;
 
 let index = require('./components/vuex/index.vue').default;
 
+let sendsms = require('./components/sendsms.vue').default;
+
 let PageNotFound = require('./components/404.vue').default;
 
 
@@ -174,6 +176,8 @@ export const routes = [
 
 
   { path:  `${prefix}/`, component: home, name:'Dashboard',meta: { layout: adminlayout } },
+
+  { path:  `${prefix}/sent/sms/notice`, component: sendsms, name:'sendsms',meta: { layout: adminlayout } },
 
 
 
