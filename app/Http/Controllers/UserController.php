@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Level;
 use App\Models\Deposit;
 use App\Models\Gateway;
+use App\Models\PackageBuy;
 use App\Models\Setting;
 use App\Models\Transition;
 use App\Models\Withdrawal;
@@ -112,7 +113,7 @@ public function referfunction($id)
 
             // $level2 =  User::where($wh2)->get();
 
-            $level2 =  User::withSum(['deposits' => function ($query) {$query->FilterByStatus('approved');}], 'amount')->withSum(['package_buys' => function ($query) {$query->FilterByStatus('Active');}],'price')->where($wh2)->get();
+            $level2 =  User::withSum(['deposits' => function ($query) {$query->FilterByStatus('approved');}], 'amount')->withSum(['package_buys' => function ($query) {$query->FilterByStatus('Active');}],'price')->where($wh2)->first();
 
             $level2count =  User::where($wh2)->count();
             if($level2count){
@@ -124,17 +125,18 @@ public function referfunction($id)
 
 
 
+        // return $refer2;
 
         $refer['level2'] = $refer2;
         $refer3 = [];
         if(!empty($refer2)){
-                        foreach ($refer2[0] as $value2) {
+                        foreach ($refer2 as $value2) {
             $wh3 = [
                 'ref_by'=>$value2->username,
             ];
             // $level3 =  User::where($wh3)->get();
 
-            $level3 =  User::withSum(['deposits' => function ($query) {$query->FilterByStatus('approved');}], 'amount')->withSum(['package_buys' => function ($query) {$query->FilterByStatus('Active');}],'price')->where($wh3)->get();
+            $level3 =  User::withSum(['deposits' => function ($query) {$query->FilterByStatus('approved');}], 'amount')->withSum(['package_buys' => function ($query) {$query->FilterByStatus('Active');}],'price')->where($wh3)->first();
 
             $level2count =  User::where($wh3)->count();
             if($level2count){
@@ -360,13 +362,18 @@ public function referfunction($id)
 
     public function referActiveUser($array = [])
     {
+        // return $array;
         $Active = 0;
-        foreach ($array as $value) {
-            $depositlist = Deposit::where(['user_id' => $value->id, 'status' => 'approved'])->count();
-            if ($depositlist > 0) {
-                $Active += 1;
+        if(!empty($array)){
+            foreach ($array as $value) {
+                $depositlist = PackageBuy::where(['userid' => $value->id, 'status' => 'Active'])->count();
+                if ($depositlist > 0) {
+                    $Active += 1;
+                }
             }
         }
+
+
         return $Active;
     }
     public function referdeposit($array = [])
@@ -401,15 +408,15 @@ public function referfunction($id)
             $Direct_Invites =  count($refercount['level1']);
         }
         if (count($refercount['level2'])) {
-            $Level1_Invitelist =  $refercount['level2'][0];
+            $Level1_Invitelist =  $refercount['level2'];
             $level2Active =  $this->referActiveUser($Level1_Invitelist);
-            $Level1_Invites =  count($refercount['level2'][0]);
+            $Level1_Invites =  count($refercount['level2']);
             $Level1_Invites_diposit = $this->referdeposit($Level1_Invitelist);
         }
         if (count($refercount['level3'])) {
-            $Level2_Invitelist =  $refercount['level3'][0];
+            $Level2_Invitelist =  $refercount['level3'];
             $level3Active =  $this->referActiveUser($Level2_Invitelist);
-            $Level2_Invites =  count($refercount['level3'][0]);
+            $Level2_Invites =  count($refercount['level3']);
             $Level2_Invites_diposit = $this->referdeposit($Level2_Invitelist);
         }
         $total_member = $Direct_Invites + $Level1_Invites + $Level2_Invites;

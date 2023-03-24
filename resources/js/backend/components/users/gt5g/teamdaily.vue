@@ -90,10 +90,10 @@ export default {
                 this.teams = this.levelTeam.level1
 
             }else if(this.$route.query.level=='Level2'){
-                this.teams = this.levelTeam.level2[0]
+                this.teams = this.levelTeam.level2
 
             }else if(this.$route.query.level=='Level3'){
-                this.teams = this.levelTeam.level3[0]
+                this.teams = this.levelTeam.level3
 
             }
 
