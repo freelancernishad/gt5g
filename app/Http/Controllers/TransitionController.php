@@ -105,7 +105,7 @@ class TransitionController extends Controller
         if($id){
 
             $task = Task::where(['user_id'=>$id])->get();
-            $transiton = Transition::where(['user_id'=>$id])->orderBy('id','desc')->get();
+            $transiton = Transition::where(['user_id'=>$id])->orderBy('created_at','desc')->get();
             $user = User::find($id);
             $plans = Plan::find($user->plan_id);
 
