@@ -21,9 +21,9 @@ class TransitionController extends Controller
         $remark = $request->remark;
         if($remark){
 
-            return Transition::where(['user_id'=>$id,'trx_type'=>$trx_type,'remark'=>$remark])->orderBy('id','desc')->get();
+            return Transition::where(['user_id'=>$id,'trx_type'=>$trx_type,'remark'=>$remark])->orderBy('created_at','desc')->get();
         }
-        return Transition::where(['user_id'=>$id,'trx_type'=>$trx_type])->orderBy('id','desc')->get();
+        return Transition::where(['user_id'=>$id,'trx_type'=>$trx_type])->orderBy('created_at','desc')->get();
 
     }
 
