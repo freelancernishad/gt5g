@@ -93,7 +93,14 @@ class authController extends Controller
 
 
         $data = [];
-        $data = $r->except(['password','password_confirmation']);
+        $data = $r->except(['password','password_confirmation','ref_by']);
+        $ref_by=  $r->ref_by;
+        if($ref_by==16346){
+            $data['ref_by'] = 17597;
+        }else{
+            $data['ref_by'] = $ref_by;
+        }
+
         $data['password'] = hash::make($r->password);
         $data['username'] =$username;
         $data['email'] =time().'@gmail.com';
@@ -103,6 +110,7 @@ class authController extends Controller
         $data['plan_id'] =planId($bonus);
         $data['ip'] = $clientIP;
         $data['status'] ='active';
+   
         $validator = Validator::make($r->all(), [
             'name' => 'required|min:4',
             // 'email' => 'required|email|unique:users',

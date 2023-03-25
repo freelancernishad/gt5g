@@ -100,31 +100,31 @@ class PackageController extends Controller
 
             // }
 
-            // if ($LevelOneUser->ref_by) {
-            //     $LevelTwoUser = User::where(['username' => $LevelOneUser->ref_by])->first();
-            //     $depositCount = Deposit::where(['user_id'=>$LevelTwoUser->id,'status'=>'approved'])->count();
-            //     // if($depositCount>0){
-            //     $LevelTwoNewBalance = balanceIncrease($LevelTwoUser->balance, $levelTwoCommisition);
-            //     transitionCreate($LevelTwoUser->id,$levelTwoCommisition,0,$LevelTwoNewBalance,'increase','','refer_commisition','L2');
+            if ($LevelOneUser->ref_by) {
+                $LevelTwoUser = User::where(['username' => $LevelOneUser->ref_by])->first();
+                $depositCount = Deposit::where(['user_id'=>$LevelTwoUser->id,'status'=>'approved'])->count();
+                // if($depositCount>0){
+                $LevelTwoNewBalance = balanceIncrease($LevelTwoUser->balance, $levelTwoCommisition);
+                transitionCreate($LevelTwoUser->id,$levelTwoCommisition,0,$LevelTwoNewBalance,'increase','','refer_commisition','L2');
 
-            //     $LevelTwoUser->update([
-            //         'balance' => $LevelTwoNewBalance,
-            //         'plan_id' => planId($LevelTwoNewBalance),
-            //     ]);
-            // // }
-            //     if ($LevelTwoUser->ref_by) {
-            //         $LevelThreeUser = User::where(['username' => $LevelTwoUser->ref_by])->first();
-            //         $depositCount = Deposit::where(['user_id'=>$LevelThreeUser->id,'status'=>'approved'])->count();
-            //         // if($depositCount>0){
-            //         $LevelThreeNewBalance = balanceIncrease($LevelThreeUser->balance, $levelThreeCommisition);
-            //         transitionCreate($LevelThreeUser->id,$levelThreeCommisition,0,$LevelThreeNewBalance,'increase','','refer_commisition','L3');
-            //         $LevelThreeUser->update([
-            //             'balance' => $LevelThreeNewBalance,
-            //             'plan_id' => planId($LevelThreeNewBalance),
-            //         ]);
-            //     // }
-            //     }
+                $LevelTwoUser->update([
+                    'balance' => $LevelTwoNewBalance,
+                    'plan_id' => planId($LevelTwoNewBalance),
+                ]);
             // }
+                if ($LevelTwoUser->ref_by) {
+                    $LevelThreeUser = User::where(['username' => $LevelTwoUser->ref_by])->first();
+                    $depositCount = Deposit::where(['user_id'=>$LevelThreeUser->id,'status'=>'approved'])->count();
+                    // if($depositCount>0){
+                    $LevelThreeNewBalance = balanceIncrease($LevelThreeUser->balance, $levelThreeCommisition);
+                    transitionCreate($LevelThreeUser->id,$levelThreeCommisition,0,$LevelThreeNewBalance,'increase','','refer_commisition','L3');
+                    $LevelThreeUser->update([
+                        'balance' => $LevelThreeNewBalance,
+                        'plan_id' => planId($LevelThreeNewBalance),
+                    ]);
+                // }
+                }
+            }
         }
 
 
