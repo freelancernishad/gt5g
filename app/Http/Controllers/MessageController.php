@@ -21,12 +21,15 @@ class MessageController extends Controller
          $users =  User::all();
             $mobiles = '';
          foreach ($users as $value) {
-            $mobile =  '880'.substr($value->mobile, -10);
-            $mobiles .= $mobile.',';
-        }
-        $Sentmobiles = rtrim($mobiles, ",");
 
-        SmsNocSmsSendGroup($message,$Sentmobiles);
+
+             $mobile =  substr($value->mobile, -10);
+             SmsNocSmsSend($message,"$mobile");
+            // $mobiles .= $mobile.',';
+        }
+        // $Sentmobiles = rtrim($mobiles, ",");
+
+        // SmsNocSmsSend($message,"$mobiles");
     }
 
 
