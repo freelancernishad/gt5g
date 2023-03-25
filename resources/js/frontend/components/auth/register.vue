@@ -30,6 +30,8 @@
             <input type="text" class="form-control rounded-0 borderright" placeholder="Invite Code" v-model="form.ref_by" aria-label="Username"
                 aria-describedby="addon-wrapping">
         </div>
+
+<!--         
         <div class="d-flex gap-5">
             <div class="flex-nowrap input-group px-3">
                 <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
@@ -41,7 +43,9 @@
                 <button type="button" class="btn fw-bold  rounded-0" @click="sentOtp"
                     style="background: #f1f1f1; color: #333; border: 2px solid var(--defaltColor);  width: 93%;">{{ otpsent }}</button>
             </div>
-        </div>
+        </div> -->
+
+
         <div class="d-flex gap-5 pt-3">
             <div class="flex-nowrap input-group px-3">
                 <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
@@ -227,12 +231,12 @@ export default {
       async  register() {
             this.isActive = true
 
-            var otpcheck = await this.callApi('post',`/api/check/otp?mobile=${this.form.mobile}&otp=${this.otp}`,[]);
+            // var otpcheck = await this.callApi('post',`/api/check/otp?mobile=${this.form.mobile}&otp=${this.otp}`,[]);
 
-            if(otpcheck.data==0){
-                this.isActive = false
-                this.notifiyGlobal("Otp does not match!");
-            }else{
+            // if(otpcheck.data==0){
+            //     this.isActive = false
+            //     this.notifiyGlobal("Otp does not match!");
+            // }else{
 
 
 
@@ -290,7 +294,7 @@ export default {
                 this.notifiyGlobal("Captcha does not match!");
             }
             // }
-        }
+        // }
         },
     },
 };
