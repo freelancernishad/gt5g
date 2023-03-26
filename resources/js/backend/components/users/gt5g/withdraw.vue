@@ -89,6 +89,34 @@
 
 <script>
 export default {
+    created() {
+
+        var daysName = this.dayName();
+
+        if(daysName=='Friday' ||daysName=='Saturday'){
+
+        }else{
+            alert('উত্তোলনেন সময় শুক্রবার ও শনিবার')
+             this.$router.push({ name: 'Authuser' });
+        }
+
+        // if(User.dateformat()[9]<=15){
+        //     if(User.dateformat()[9]>=10){
+
+
+        //     }else{
+        //         this.notifiy('প্রত্যাহার সময় সকাল ১০:০০ থেকে বিকাল ০৪:০০ টা পর্যন্ত')
+
+        //         this.$router.push({ name: 'Useraccount' });
+
+
+        //     }
+        // }else{
+        //     this.notifiy('প্রত্যাহার সময় সকাল ১০:০০ থেকে বিকাল ০৪:০০ টা পর্যন্ত')
+        //     this.$router.push({ name: 'Useraccount' });
+
+        // }
+    },
     data(){
         return {
             isActive:true,
@@ -139,7 +167,7 @@ export default {
             this.Message = mess;
             setTimeout(() => {
                 this.Messageactive = false
-            }, 1000);
+            }, 2000);
         },
         randomLetter(length) {
                 let result = 'S'+this.dateformatglobal()[10]+this.dateformatglobal()[11]+this.dateformatglobal()[12]+Math.floor(Math.random() * (999999999999 - 11111111111));

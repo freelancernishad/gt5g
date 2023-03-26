@@ -27,6 +27,18 @@ export default {
             }, 1000);
         },
 
+        dayName(date=''){
+            if (date == '') {
+                var today = new Date();
+            } else {
+                var today = new Date(date);
+            }
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var d = new Date(today);
+            var dayName = days[d.getDay()];
+            return dayName;
+        },
+
 
         async callApi(method, url, dataObj){
 
