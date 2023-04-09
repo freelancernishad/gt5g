@@ -163,8 +163,9 @@ if($width=='' && $height==''){
 
  function tasklevelCommistion($level, $amount)
 {
+    $amount = intval($amount);
     $level = Level::where(['name' => $level])->first();
-    $commisition = $level->task_commisition;
+    $commisition = intval($level->task_commisition);
     return   $commisitionAmount = (($amount * $commisition) / 100);
 }
  function levelCommistion($level, $amount)
