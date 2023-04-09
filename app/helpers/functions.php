@@ -170,8 +170,9 @@ if($width=='' && $height==''){
 }
  function levelCommistion($level, $amount)
 {
+    $amount = intval($amount);
     $level = Level::where(['name' => $level])->first();
-    $commisition = $level->comission;
+    $commisition = intval($level->comission);
     return   $commisitionAmount = (($amount * $commisition) / 100);
 }
  function balanceIncrease($old, $new)
