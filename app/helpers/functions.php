@@ -176,6 +176,8 @@ if($width=='' && $height==''){
 }
  function balanceIncrease($old, $new)
 {
+    $old = intval($old);
+    $new = intval($new);
     if ($old == '' || $old == null) $old = 0;
     if ($new == '' || $new == null) $new = 0;
     return number_format($old + $new, 2, '.', '');
@@ -183,6 +185,8 @@ if($width=='' && $height==''){
 
  function balanceDecrease($old, $new)
 {
+    $old = intval($old);
+    $new = intval($new);
     if ($old == '' || $old == null) $old = 0;
     if ($new == '' || $new == null) $new = 0;
     return number_format($old - $new, 2, '.', '');
