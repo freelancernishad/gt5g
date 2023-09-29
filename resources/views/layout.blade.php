@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>SUN ENERGY</title>
+    <title>CK Calvin Klein</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('sun.jpg') }}">
@@ -14,7 +14,7 @@
         *{
             --van-cell-group-background-color:white;
              --van-button-default-background-color:white;
-             --defaltColor:#d14d0e;
+             --defaltColor:#20C5FA;
         }
 
 
@@ -73,7 +73,7 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.0.39') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.0') }}"></script>
 
 
 

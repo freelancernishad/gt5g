@@ -13,9 +13,6 @@
                     <div class="carousel-item">
                         <img :src="$asseturl+'img/sl2.jpeg'" class="d-block w-100" alt="Slide 2">
                     </div>
-                    <div class="carousel-item">
-                        <img :src="$asseturl+'img/sl3.jpeg'" class="d-block w-100" alt="Slide 2">
-                    </div>
                 </div>
                 <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
                     data-bs-slide="prev">
