@@ -31,7 +31,7 @@
                 aria-describedby="addon-wrapping">
         </div>
 
-<!--         
+<!--
         <div class="d-flex gap-5">
             <div class="flex-nowrap input-group px-3">
                 <span class="input-group-text rounded-0 borderleft" id="addon-wrapping"><img :src="$asseturl+'img/download.png'"
@@ -88,7 +88,7 @@ export default {
             this.form.ref_by = this.$route.query.ref;
             this.refer = 1;
         } else {
-            this.form.ref_by = "16346";
+            this.form.ref_by = "CK112233";
             this.refercheck();
         }
         this.form.country = "+880";
