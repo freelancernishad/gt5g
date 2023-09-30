@@ -82,14 +82,15 @@
     </router-link>
 
 </div>
-
+<!--
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'aboutus'}"  class="mx-3 defaltColor">
-                <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
         <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">About Us</p>
     </router-link>
-</div>
+</div> -->
+
+
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
     <router-link :to="{name:'share'}"  class="mx-3 defaltColor">
                 <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
@@ -99,7 +100,7 @@
 </div>
 
 <div class="bg-white  mx-4 my-3 py-4 shadow-lg">
-    <a :href="$asseturl+'SUN_ENERGY.apk'"  class="mx-3 defaltColor">
+    <a :href="$asseturl+'ckonlinebusinessusa.apk'"  class="mx-3 defaltColor">
                 <!-- <img :src="$asseturl+'img/book.126a5a8e.png'" alt=""> -->
         <i class="fa-regular fa-rectangle-list"></i>
         <p class="d-inline fw-bold mb-0 ms-1">Download APP</p>

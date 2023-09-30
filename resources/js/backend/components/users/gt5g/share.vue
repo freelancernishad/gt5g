@@ -24,7 +24,10 @@
           </div>
           <p class="pb-5 px-5 py-2">The app provides an exclusive link and an exclusive QR code, send it to your friends, and you will get a 10% rebate.</p>
         </div>
-        <div class="bg-white mx-4 px-4  shadow-lg lh-1 mb-5">
+
+
+
+        <!-- <div class="bg-white mx-4 px-4  shadow-lg lh-1 mb-5">
             <p class="border-bottom  py-2 topp text-center">Invite friends to register, each reward ৳5, total reward ৳100.</p>
 
             <div class="d-flex">
@@ -37,7 +40,10 @@
                     <p class="m-0 me-3 defaltColor py-2">{{ row.refercount }} / 20</p>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+
+
 
     </main>
     <Message :Isactive="Messageactive" :Message="Message"/>

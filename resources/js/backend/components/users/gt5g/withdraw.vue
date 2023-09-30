@@ -64,9 +64,9 @@
 
 
         <p>You can withdraw daily</p>
-        <p>Minimum withdrawal is Rs.300</p>
+        <p>Minimum withdrawal is Rs.100</p>
         <p>Withdrawal Charge 10%</p>
-        <p>Deposit and withdrawal can be Done at any time of 24 hours. Thank you</p>
+        <p>Deposit and withdrawal can be Done at any time of 1-3 hours. Thank you</p>
 
 
 
