@@ -93,12 +93,12 @@ export default {
 
         var daysName = this.dayName();
 
-        if(daysName=='Friday' ||daysName=='Saturday'){
+        // if(daysName=='Friday' ||daysName=='Saturday'){
 
-        }else{
-            alert('উত্তোলনেন সময় শুক্রবার ও শনিবার')
-             this.$router.push({ name: 'Authuser' });
-        }
+        // }else{
+        //     alert('উত্তোলনেন সময় শুক্রবার ও শনিবার')
+        //      this.$router.push({ name: 'Authuser' });
+        // }
 
         // if(User.dateformat()[9]<=15){
         //     if(User.dateformat()[9]>=10){

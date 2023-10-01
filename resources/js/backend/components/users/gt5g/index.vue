@@ -63,11 +63,24 @@
             </span>
         </section>
 
+<!--
+        <section>
+            <video autoplay loop muted width="100%">
+                <source :src="$asseturl+'video.mp4'" type="video/mp4">
+            </video>
+        </section> -->
 
 
-        <div class="mt-5">
+        <section>
+            <video autoplay loop width="100%">
+                <source :src="$asseturl+'video.mp4'" type="video/mp4">
+            </video>
+        </section>
+
+
+        <!-- <div class="mt-5">
             <img width="100%" :src="$asseturl+'img/partner.jpeg'" alt="">
-        </div>
+        </div> -->
 
 
 
