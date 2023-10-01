@@ -21,11 +21,11 @@
 
             </div>
             <div>
-                <p class="bg-warning mx-3 ps-4 py-2 rounded-top-5 pt-3"
+                <p class="bg-white mx-3 ps-4 py-2 rounded-top-5 pt-3"
                     style="margin-bottom: 9px;;font-size: 14px;border-top-left-radius: 2em!important; border-top-right-radius: 2em !important;">
                     অর্ডার আইডি : {{ form.orderid }}</p>
                 <div>
-                    <p class="bg-warning fw-medium mx-3 pt-2 py-5 rounded-bottom-5 text-center"
+                    <p class="bg-white fw-medium mx-3 pt-2 py-5 rounded-bottom-5 text-center"
                         style="border-bottom-right-radius: 2rem !important;border-bottom-left-radius: 2rem !important;font-size: 28px !important;font-weight: 700;">
                         {{ form.amount }} TK</p>
                 </div>
